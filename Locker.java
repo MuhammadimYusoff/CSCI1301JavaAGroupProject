@@ -75,7 +75,7 @@ class largeLocker extends Locker{
 		}
 }
 	
-
+// BELOW IS MAIN METHOD TO CREATE INSTANCES OF SMALL,MEDIUM,LARGE LOCKERS BUT I COMMENTED IT OUT BCS IT SHOULD BE IN ANOTHER FILE
 //public static void main(String[] args) {
 //	// TODO Auto-generated method stub
 //	int a = 3;
