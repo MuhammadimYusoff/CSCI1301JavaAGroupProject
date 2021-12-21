@@ -6,21 +6,19 @@ public class locker {
 	private int door = 0;
 	private char status = 'x';
 	private int availability = 1;
-	
-	Locker(){
-		
+
+	locker() {
+
 	}
-	
-	Locker( int number, String colour, int door, char status, int availability){
+
+	locker(int number, String colour, int door, char status, int availability) {
 		this.number = number;
 		this.colour = colour;
 		this.door = door;
 		this.status = status;
 		this.availability = availability;
-
-		
 	}
-	
+
 	public int getNumber() {
 		return number;
 	}
@@ -61,21 +59,21 @@ public class locker {
 		this.availability = availability;
 	}
 
-class smallLocker extends Locker{
-	smallLocker(int number, String colour, int door, char status, int availability){
+	class smallLocker extends locker {
+		smallLocker(int number, String colour, int door, char status, int availability) {
+		}
 	}
-}
 
-class mediumLocker extends Locker{
-	mediumLocker(int number, String colour, int door, char status, int availability,int shelves){
+	class mediumLocker extends locker {
+		mediumLocker(int number, String colour, int door, char status, int availability, int shelves) {
 		}
-}
-	
-class largeLocker extends Locker{
-	largeLocker(int number, String colour, int door, char status, int availability,int shelves){
+	}
+
+	class largeLocker extends locker {
+		largeLocker(int number, String colour, int door, char status, int availability, int shelves) {
 		}
-}
-	
+	}
+
 // BELOW IS MAIN METHOD TO CREATE INSTANCES OF SMALL,MEDIUM,LARGE LOCKERS BUT I COMMENTED IT OUT BCS IT SHOULD BE IN ANOTHER FILE
 //public static void main(String[] args) {
 //	// TODO Auto-generated method stub
