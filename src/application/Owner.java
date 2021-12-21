@@ -57,12 +57,6 @@ public class Owner {
 		this.phoneNo = phoneNo;
 	}
 
-	/*
-	 * public int getPin() {
-	 * return pin;
-	 * }
-	 */
-
 	public void setPin(int pin) {
 		this.pin = pin;
 	}
@@ -70,12 +64,6 @@ public class Owner {
 	public Date getDate() {
 		return date;
 	}
-
-	/*
-	 * public void setDate(Date date) {
-	 * this.date = date;
-	 * }
-	 */
 
 	public String getDuriation() {
 		return duriation;
