@@ -7,7 +7,7 @@ import javafx.scene.Scene;
 import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
 
-public class Owner extends Application {
+public class Owner  {
 
 	private String name;
 	private int id;
@@ -104,33 +104,8 @@ public class Owner extends Application {
 		
 		///this just a trial i'll edit on that later 
 	}
-	
 
-	 /*  @Override
-	    public void start(Stage primaryStage) throws Exception{
-	        primaryStage.setResizable(false);
-	        Parent root = FXMLLoader.load(getClass().getResource("sample.fxml"));
-	        primaryStage.setTitle("login interface");
-	        primaryStage.setScene(new Scene(root, 600, 400));
-	        primaryStage.show();
-	    }*/
-	
-	public void start(Stage primaryStage) {
-		try {
-			BorderPane root = new BorderPane();
-			Scene scene = new Scene(root,400,400);
-			scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
-			primaryStage.setScene(scene);
-			primaryStage.show();
-		} catch(Exception e) {
-			e.printStackTrace();
-		}
-	}
-	   
-	   public static void main(String[] args) {
-		launch(args);
-	}
-	
+
 }
 
 
