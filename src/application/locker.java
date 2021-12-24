@@ -60,22 +60,6 @@ public class locker {
 		this.availability = availability;
 	}
 
-	class smallLocker extends locker {
-		smallLocker(int number, String color, int door, char status, int availability) {
-		}
-	}
-
-	class mediumLocker extends locker {
-		mediumLocker(int number, String color, int door, char status, int availability, int shelves) {
-		}
-	}
-
-	class largeLocker extends locker {
-		largeLocker(int number, String color, int door, char status, int availability, int shelves) {
-		}
-	}
-
-// BELOW IS MAIN METHOD TO CREATE INSTANCES OF SMALL,MEDIUM,LARGE LOCKERS BUT I COMMENTED IT OUT BCS IT SHOULD BE IN ANOTHER FILE
 //public static void main(String[] args) {
 //	// TODO Auto-generated method stub
 //	int a = 3;
@@ -112,3 +96,17 @@ public class locker {
 //	
 //}
 }
+
+//BELOW IS MAIN METHOD TO CREATE INSTANCES OF SMALL,MEDIUM,LARGE LOCKERS BUT I COMMENTED IT OUT BCS IT SHOULD BE IN ANOTHER FILE
+/*
+ * CODE GRAVEYARD
+ * 
+ * class smallLocker extends locker { smallLocker(int number, String color, int
+ * door, char status, int availability) { } }
+ * 
+ * class mediumLocker extends locker { mediumLocker(int number, String color,
+ * int door, char status, int availability, int shelves) { } }
+ * 
+ * class largeLocker extends locker { largeLocker(int number, String color, int
+ * door, char status, int availability, int shelves) { } }
+ */

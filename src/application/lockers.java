@@ -4,10 +4,10 @@ public class lockers {
 
 }
 
-class smallLocker extends locker {
+class smallLocker extends locker { // implements lockerInterface
 	int number = (int) Math.round(Math.random() * 100);
-	String color = "White";
-	int door = 2;
+	final String color = "White";
+	final int door = 2;
 	int availability = 1;
 
 	smallLocker() {
@@ -22,10 +22,6 @@ class smallLocker extends locker {
 		return door;
 	}
 
-	public void setDoor(int door) {
-		this.door = door;
-	}
-
 	public int getNumber() {
 		return number;
 	}
@@ -36,10 +32,6 @@ class smallLocker extends locker {
 
 	public String getColor() {
 		return color;
-	}
-
-	public void setColor(String color) {
-		this.color = color;
 	}
 
 	public int getAvailability() {
@@ -53,7 +45,10 @@ class smallLocker extends locker {
 }
 
 class mediumLocker extends locker {
-	int door = 3;
+	int number = (int) Math.round(Math.random() * 100);
+	final String color = "Brown";
+	final int door = 3;
+	int availability = 1;
 
 	mediumLocker() {
 
@@ -64,6 +59,11 @@ class mediumLocker extends locker {
 }
 
 class largeLocker extends locker {
+	int number = (int) Math.round(Math.random() * 100);
+	final String color = "Gold";
+	final int door = 4;
+	int availability = 1;
+
 	largeLocker() {
 
 	}
