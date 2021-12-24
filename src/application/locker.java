@@ -2,20 +2,21 @@ package application;
 
 public class locker {
 	private int number = 0;
-	private String colour = "Red";
+	private String color = "Red";
 	private int door = 0;
-	private char status = 'x';
-	private int availability = 1;
+//	private char status = 'x'; // Check availability on the 'availability' value, explanation on lockerInterface.java
+	private int availability = 1; // Availability will replace to user ID number if they rent, then will replace
+									// back by 1 if not rent.
 
 	locker() {
 
 	}
 
-	locker(int number, String colour, int door, char status, int availability) {
+	locker(int number, String color, int door, int availability) { // char status
 		this.number = number;
-		this.colour = colour;
+		this.color = color;
 		this.door = door;
-		this.status = status;
+//		this.status = status;
 		this.availability = availability;
 	}
 
@@ -27,12 +28,12 @@ public class locker {
 		this.number = number;
 	}
 
-	public String getColour() {
-		return colour;
+	public String getcolor() {
+		return color;
 	}
 
-	public void setColour(String colour) {
-		this.colour = colour;
+	public void setcolor(String color) {
+		this.color = color;
 	}
 
 	public int getDoor() {
@@ -43,13 +44,13 @@ public class locker {
 		this.door = door;
 	}
 
-	public char getStatus() {
-		return status;
-	}
-
-	public void setStatus(char status) {
-		this.status = status;
-	}
+//	public char getStatus() {
+//		return status;
+//	}
+//
+//	public void setStatus(char status) {
+//		this.status = status;
+//	}
 
 	public int getAvailability() {
 		return availability;
@@ -60,17 +61,17 @@ public class locker {
 	}
 
 	class smallLocker extends locker {
-		smallLocker(int number, String colour, int door, char status, int availability) {
+		smallLocker(int number, String color, int door, char status, int availability) {
 		}
 	}
 
 	class mediumLocker extends locker {
-		mediumLocker(int number, String colour, int door, char status, int availability, int shelves) {
+		mediumLocker(int number, String color, int door, char status, int availability, int shelves) {
 		}
 	}
 
 	class largeLocker extends locker {
-		largeLocker(int number, String colour, int door, char status, int availability, int shelves) {
+		largeLocker(int number, String color, int door, char status, int availability, int shelves) {
 		}
 	}
 
@@ -90,8 +91,8 @@ public class locker {
 //		
 //	}
 //	
-//	System.out.println(smallLocker[0].getColour());
-//	System.out.println(mediumLocker[2].getColour());
+//	System.out.println(smallLocker[0].getcolor());
+//	System.out.println(mediumLocker[2].getcolor());
 //
 //	
 //	smallLocker[0].setAvailability(0);

@@ -1,13 +1,9 @@
 package application;
 
-import java.util.*;
+import java.util.Date;
+import java.util.Scanner;
 
-import javafx.application.Application;
-import javafx.scene.Scene;
-import javafx.scene.layout.BorderPane;
-import javafx.stage.Stage;
-
-public class Owner  {
+public class Owner {
 
 	private String name;
 	private int id;
@@ -27,8 +23,7 @@ public class Owner  {
 		this.pin = pin;
 	}
 
-	public Owner(String name, int id, int phoneNo, int pin,
-			String duriation, double totalRent) {
+	public Owner(String name, int id, int phoneNo, int pin, String duriation, double totalRent) {
 		date = new Date();
 		this.name = name;
 		this.id = id;
@@ -85,29 +80,24 @@ public class Owner  {
 	public void setTotalRent(double totalRent) {
 		this.totalRent = totalRent;
 	}
-	
-	public void login( ) {
-		
+
+	public void login() {
+
 		Scanner input = new Scanner(System.in);
 
-		this.id=0000;
-		this.pin=0000;
-		
+		this.id = 0000;
+		this.pin = 0000;
+
 		System.out.println("enter id and pin: ");
 		int inputId = input.nextInt();
 		int inputPin = input.nextInt();
-		
-		if(inputId == this.id && inputPin == this.pin)
+
+		if (inputId == this.id && inputPin == this.pin)
 			System.out.println("login right");
 		else
 			System.out.println("wrong id or pin");
-		
-		///this just a trial i'll edit on that later 
+
+		/// this just a trial i'll edit on that later
 	}
 
-
 }
-
-
-
-
