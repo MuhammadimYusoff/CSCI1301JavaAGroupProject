@@ -1,26 +1,59 @@
 package references;
-// Created by Avinesh
-
-// Semi Car Rental System
 
 public class Program {
 	public static void main(String[] args) {
-		// Scanner sc = new Scanner(System.in);
-		Car[] obj = { (new Car("smallLocker 1", true, 20, 1)), (new Car("smallLocker 2", false, 20, 2)),
-				(new Car("smallLocker 3", true, 20, 3)) };
+//		Declare the Lockers to be use
+		lockers[] obj = { (new lockers("smallLocker 1", true, 20, 2)), (new lockers("smallLocker 2", false, 20, 2)),
+				(new lockers("smallLocker 3", true, 20, 3)) };
 
-		// Print out all Lockers available (Debug usage)
-		// System.out.println("All car details\n---------------");
-		// for(Car x:obj){
-		// System.out.println(x);
-		// }
+//		Declare the Owner for the lockers.
+		owner Owner = new owner(2);
 
-		// Printout Available Car
-		carsAvailable(obj);
+		System.out.println("OwnerID: " + Owner.getId());
 
-//		carSelection(obj, carName, rentHours);
+// 		Printout Available Lockers can be rented. // Use This
+//		lockersAvailable(obj);
 
+//		Printout Rented Lockers to Student Profile Screen. // Use This
+		lockersRented(obj, owner.getId()); // carSelection(obj, carName, rentHours);
+
+// 		Print out all Lockers available (Debug usage)
+// 		System.out.println("All car details\n---------------");
+// 		for(Car x:obj){
+// 		System.out.println(x);
+// }
 	}
+
+//	Check How Many Lockers Available
+	public static void lockersAvailable(lockers[] arr) {
+		int found = 0;
+		// int foundSmall = 0;
+		// int foundMed = 0;
+		// int foundLarge = 0;
+		System.out.println("\nAvailable Lockers\n-----------------");
+		for (lockers x : arr) {
+			if (x.isAvailable)
+				found++;
+		}
+		System.out.println(found); // use for lockers to display on "Available" label
+	}
+
+	/*
+	 * Change to loop to able have ownerID and locker.id to be compared in one loop
+	 * if possible.
+	 */
+//Check How Many Lockers Rented by a user to be display on Student Profile.
+	public static void lockersRented(lockers[] arr, int id) {
+		int ownerID = owner.getId();
+		int found = 0;
+		System.out.println("\nRented Lockers\n-----------------");
+		for (lockers x : arr) {
+			if (x.id == ownerID)
+				found++;
+		}
+		System.out.println("Rented Small Locker: " + found); // use for lockers to display on "Available" label
+	}
+}
 
 // 		Checkout Price.
 //	public static void carSelection(Car[] arr, String carName, int hours) {
@@ -38,40 +71,6 @@ public class Program {
 //			System.out.println("\nSorry, the car name you entered is not available at the moment.");
 //		}
 //	}
-
-// 		Check Availablity
-	public static void carsAvailable(Car[] arr) {
-		int found = 0;
-		// int foundSmall = 0;
-		// int foundMed = 0;
-		// int foundLarge = 0;
-		System.out.println("\nAvailable Lockers\n-----------------");
-		for (Car x : arr) {
-			if (x.isAvailable)
-				found++;
-		}
-		System.out.println(found);
-	}
-}
-
-class Car {
-	String name;
-	boolean isAvailable;
-	int pricePerHour; // price in $
-	int id;
-
-	public Car(String name, boolean isAvailable, int pricePerHour, int id) {
-		this.name = name;
-		this.isAvailable = isAvailable;
-		this.pricePerHour = pricePerHour;
-		this.id = id;
-	}
-
-	public String toString() {
-		return "Name: " + name + "\nAvailable: " + isAvailable + "\nPrice per hour: $" + pricePerHour
-				+ "\n+–----------------+";
-	}
-}
 
 //	Other Codes
 /*
