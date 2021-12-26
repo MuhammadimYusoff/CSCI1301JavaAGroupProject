@@ -8,8 +8,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="527.0" prefWidth="734.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="527.0" prefWidth="734.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <ImageView fitHeight="144.0" fitWidth="94.0" pickOnBounds="true" preserveRatio="true">
          <image>
@@ -110,19 +109,13 @@
             </TextField>
          </children>
       </AnchorPane>
-      <TextField layoutX="512.0" layoutY="25.0" />
       <TextField layoutX="512.0" layoutY="84.0" />
-      <Text layoutX="512.0" layoutY="20.0" strokeType="OUTSIDE" strokeWidth="0.0" text="TO:" />
-      <Text layoutX="510.0" layoutY="238.0" strokeType="OUTSIDE" strokeWidth="0.0" text="FROM:" />
-      <TextField layoutX="512.0" layoutY="186.0" />
+      <Text layoutX="510.0" layoutY="238.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Number of Days" />
       <TextField layoutX="512.0" layoutY="248.0" />
-      <TextField layoutX="512.0" layoutY="376.0" />
       <TextField layoutX="512.0" layoutY="444.0" />
-      <Text layoutX="519.0" layoutY="174.0" strokeType="OUTSIDE" strokeWidth="0.0" text="TO:" />
-      <Text layoutX="519.0" layoutY="363.0" strokeType="OUTSIDE" strokeWidth="0.0" text="TO:" />
-      <Text layoutX="516.0" layoutY="73.0" strokeType="OUTSIDE" strokeWidth="0.0" text="FROM:" />
-      <Text layoutX="512.0" layoutY="434.0" strokeType="OUTSIDE" strokeWidth="0.0" text="FROM:" />
-      <Button layoutX="560.0" layoutY="129.0" mnemonicParsing="false" style="-fx-background-color: #0598ff;" text="CHOOSE" />
+      <Text layoutX="516.0" layoutY="73.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Number of Days" />
+      <Text layoutX="512.0" layoutY="434.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Number of Days" />
+      <Button layoutX="560.0" layoutY="129.0" mnemonicParsing="false" onAction="#smallLockerTotalRent" style="-fx-background-color: #0598ff;" text="CHOOSE" />
       <Button layoutX="560.0" layoutY="297.0" mnemonicParsing="false" style="-fx-background-color: #0598ff;" text="CHOOSE" />
       <Button layoutX="560.0" layoutY="487.0" mnemonicParsing="false" style="-fx-background-color: #0598ff;" text="CHOOSE" />
    </children>

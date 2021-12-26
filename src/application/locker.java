@@ -1,38 +1,38 @@
 package application;
 
 public class locker {
-	private int number = 0;
-	private String color = "Red";
+//	private int number = 0;
+	private String color; // = "Red";
 	private int door = 0;
 //	private char status = 'x'; // Check availability on the 'availability' value, explanation on lockerInterface.java
-	private int availability = 1; // Availability will replace to user ID number if they rent, then will replace
-									// back by 1 if not rent.
+//	private int availability = 1; // Availability will replace to user ID number if they rent, then will replace
+	// back by 1 if not rent.
 
 	locker() {
 
 	}
 
 	locker(int number, String color, int door, int availability) { // char status
-		this.number = number;
+//		this.number = number;
 		this.color = color;
 		this.door = door;
 //		this.status = status;
-		this.availability = availability;
+//		this.availability = availability;
 	}
 
-	public int getNumber() {
-		return number;
-	}
+//	public int getNumber() {
+//		return number;
+//	}
+//
+//	public void setNumber(int number) {
+//		this.number = number;
+//	}
 
-	public void setNumber(int number) {
-		this.number = number;
-	}
-
-	public String getcolor() {
+	public String getColor() {
 		return color;
 	}
 
-	public void setcolor(String color) {
+	public void setColor(String color) {
 		this.color = color;
 	}
 
@@ -52,13 +52,13 @@ public class locker {
 //		this.status = status;
 //	}
 
-	public int getAvailability() {
-		return availability;
-	}
-
-	public void setAvailability(int availability) {
-		this.availability = availability;
-	}
+//	public int getAvailability() {
+//		return availability;
+//	}
+//
+//	public void setAvailability(int availability) {
+//		this.availability = availability;
+//	}
 
 //public static void main(String[] args) {
 //	// TODO Auto-generated method stub

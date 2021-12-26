@@ -1,14 +1,19 @@
 package application;
 
+import java.util.Arrays;
+
 public class lockers {
 
 }
 
 class smallLocker extends locker { // implements lockerInterface
-	int number = (int) Math.round(Math.random() * 100);
-	final String color = "White";
+//	int number = (int) Math.round(Math.random() * 100);
+	String color = "White";
 	final int door = 2;
-	int availability = 1;
+	double price = 20.00;
+	boolean availability = true; // {123, 1, 1} <-- for value check (this example 3 smallLockers, one rented by
+	// userID 123)
+//	availability.length() <-- this one for display how many
 
 	smallLocker() {
 
@@ -18,37 +23,18 @@ class smallLocker extends locker { // implements lockerInterface
 
 	}
 
-	public int getDoor() {
-		return door;
-	}
-
-	public int getNumber() {
-		return number;
-	}
-
-	public void setNumber(int number) {
-		this.number = number;
-	}
-
-	public String getColor() {
-		return color;
-	}
-
-	public int getAvailability() {
-		return availability;
-	}
-
-	public void setAvailability(int availability) {
-		this.availability = availability;
+	void check(int availability[]) {
+		System.out.println(Arrays.toString(availability));
 	}
 
 }
 
 class mediumLocker extends locker {
-	int number = (int) Math.round(Math.random() * 100);
+//	int number = (int) Math.round(Math.random() * 100);
 	final String color = "Brown";
 	final int door = 3;
-	int availability = 1;
+	double price = 40.00;
+	int[] availability = { 1, 1, 1 };
 
 	mediumLocker() {
 
@@ -59,10 +45,11 @@ class mediumLocker extends locker {
 }
 
 class largeLocker extends locker {
-	int number = (int) Math.round(Math.random() * 100);
+//	int number = (int) Math.round(Math.random() * 100);
 	final String color = "Gold";
 	final int door = 4;
-	int availability = 1;
+	double price = 60.00;
+	int[] availability = { 1, 1, 1 };
 
 	largeLocker() {
 
