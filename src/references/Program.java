@@ -1,16 +1,13 @@
+package references;
 // Created by Avinesh
-// Semi Car Rental System
 
-import java.util.*;
+// Semi Car Rental System
 
 public class Program {
 	public static void main(String[] args) {
 		// Scanner sc = new Scanner(System.in);
-		Car[] obj = {
-				(new Car("smallLocker 1", true, 20, 1)),
-				(new Car("smallLocker 2", false, 20, 2)),
-				(new Car("smallLocker 3", true, 20, 3))
-		};
+		Car[] obj = { (new Car("smallLocker 1", true, 20, 1)), (new Car("smallLocker 2", false, 20, 2)),
+				(new Car("smallLocker 3", true, 20, 3)) };
 
 		// Print out all Lockers available (Debug usage)
 		// System.out.println("All car details\n---------------");
@@ -21,28 +18,28 @@ public class Program {
 		// Printout Available Car
 		carsAvailable(obj);
 
-		carSelection(obj, carName, rentHours);
+//		carSelection(obj, carName, rentHours);
 
 	}
 
-	// Untuk Checkout Price Count
-	public static void carSelection(Car[] arr, String carName, int hours) {
-		int count = 0;
-		for (Car x : arr) {
-			if (carName.equals(x.name) && x.isAvailable) {
-				System.out.println("\nThe car you selected is: " + x.name);
-				System.out.println("Your charges would be approx: $" + (x.pricePerHour) * hours);
-				System.out.println("Your car will be delivered to your location soon.\nWe wish you a happy journey!!");
-				break;
-			} else
-				count++;
-		}
-		if (count == 5) {
-			System.out.println("\nSorry, the car name you entered is not available at the moment.");
-		}
-	}
+// 		Checkout Price.
+//	public static void carSelection(Car[] arr, String carName, int hours) {
+//		int count = 0;
+//		for (Car x : arr) {
+//			if (carName.equals(x.name) && x.isAvailable) {
+//				System.out.println("\nThe car you selected is: " + x.name);
+//				System.out.println("Your charges would be approx: $" + (x.pricePerHour) * hours);
+//				System.out.println("Your car will be delivered to your location soon.\nWe wish you a happy journey!!");
+//				break;
+//			} else
+//				count++;
+//		}
+//		if (count == 5) {
+//			System.out.println("\nSorry, the car name you entered is not available at the moment.");
+//		}
+//	}
 
-	// Untuk Check Availablity
+// 		Check Availablity
 	public static void carsAvailable(Car[] arr) {
 		int found = 0;
 		// int foundSmall = 0;
@@ -52,7 +49,6 @@ public class Program {
 		for (Car x : arr) {
 			if (x.isAvailable)
 				found++;
-			// System.out.println(x.name);
 		}
 		System.out.println(found);
 	}
@@ -76,3 +72,9 @@ class Car {
 				+ "\n+–----------------+";
 	}
 }
+
+//	Other Codes
+/*
+ * for (int x : small.availability) { if (x == userid) { found = true; break; }
+ * System.out.println(found); }
+ */

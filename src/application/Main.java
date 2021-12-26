@@ -1,7 +1,5 @@
 package application;
 
-import java.util.Arrays;
-
 /*
  * This Main.java File will be divided into 4 Parts Handling:
  * 1) Sign In
@@ -23,7 +21,8 @@ public class Main {
 //		Owner owner2 = new Owner("testing", 1234, 011100, 123, "testing", 45.0);
 //		Owner owner3 = new Owner("testing", 12345, 011100, 123, "testing", 45.0);
 
-		largeLocker large = new largeLocker();
+//		largeLocker large = new largeLocker();
+//		System.out.println("Number of Doors: " + large.door);
 //		System.out.println(large.getDoor());
 //		int a = large.door;
 //		System.out.println(a);
@@ -31,19 +30,14 @@ public class Main {
 //		owner1("testing", 123, 011100, 123, "testing", 45.0);
 
 		smallLocker small = new smallLocker();
-		System.out.print(Arrays.toString(small.availability)); // Check value of Availability
-		for (int i = 0; i > small.availability.length; i++) {
+//		System.out.println("The Price: " + small.price);
+		System.out.println(!small.availability); // Output: false (not available)
+		System.out.println(small.availability); // Output: true (available)
+		System.out.println();
 
-		}
-
-		for (int x : small.availability) {
-			if (x == userid) {
-				found = true;
-				break;
-			}
-		}
-
-		System.out.println(found);
+//		System.out.print(Arrays.toString(small.availability)); // Check value of Availability
+//		for (int i = 0; i > small.availability.length; i++) {
+//		}
 //		small.getColor();
 //		System.out.println();
 //		smallLocker[] small = new smallLocker[3];
