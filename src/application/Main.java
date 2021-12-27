@@ -20,7 +20,7 @@ public class Main {
 //		Owner owner1 = new Owner("testing", 123, 011100, 123, "testing", 45.0);
 //		Owner owner2 = new Owner("testing", 1234, 011100, 123, "testing", 45.0);
 //		Owner owner3 = new Owner("testing", 12345, 011100, 123, "testing", 45.0);
-		Owner owner = new Owner("Stringing", 123, 011101010, 123, "3", 0.0);
+//		Owner owner = new Owner("Stringing", 123, 011101010, 123, "3", 0.0);
 
 //		largeLocker large = new largeLocker();
 //		System.out.println("Number of Doors: " + large.door);
@@ -30,11 +30,14 @@ public class Main {
 
 //		owner1("testing", 123, 011100, 123, "testing", 45.0);
 
-		smallLocker small = new smallLocker();
+//		smallLocker[] obj = { (new smallLocker(1, "Shiro", 2, false)), (new smallLocker(2, "Kuro", 2, true)),
+//				(new smallLocker(3, "Gold", 2, true)) };
+//		System.out.println(Arrays.deepToString(obj)); // Output: true (available)
+//		smallLocker.lockersAvailable(obj);
 //		System.out.println("The Price: " + small.price);
-		System.out.println(!small.availability); // Output: false (not available)
-		System.out.println(small.availability); // Output: true (available)
-		System.out.println();
+//		System.out.println(!small.availability); // Output: false (not available)
+
+//		System.out.println();
 
 //		System.out.print(Arrays.toString(small.availability)); // Check value of Availability
 //		for (int i = 0; i > small.availability.length; i++) {

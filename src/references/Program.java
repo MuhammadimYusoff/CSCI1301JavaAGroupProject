@@ -3,13 +3,13 @@ package references;
 public class Program {
 	public static void main(String[] args) {
 //		Declare the Lockers to be use
-		lockers[] obj = { (new lockers("smallLocker 1", true, 20, 2)), (new lockers("smallLocker 2", false, 20, 2)),
+		lockers[] obj = { (new lockers("smallLocker 1", true, 20, 1)), (new lockers("smallLocker 2", false, 20, 2)),
 				(new lockers("smallLocker 3", true, 20, 3)) };
 
 //		Declare the Owner for the lockers.
 		owner Owner = new owner(2);
 
-		System.out.println("OwnerID: " + Owner.getId());
+//		System.out.println("OwnerID: " + Owner.getId());
 
 // 		Printout Available Lockers can be rented. // Use This
 //		lockersAvailable(obj);
@@ -25,7 +25,7 @@ public class Program {
 	}
 
 //	Check How Many Lockers Available
-	public static void lockersAvailable(lockers[] arr) {
+	public static void lockersAvailable(lockers[] arr) { // lockers.java dan locker.java
 		int found = 0;
 		// int foundSmall = 0;
 		// int foundMed = 0;

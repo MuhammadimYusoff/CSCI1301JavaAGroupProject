@@ -1,7 +1,5 @@
 package application;
 
-import java.util.Arrays;
-
 public class lockers {
 
 }
@@ -22,8 +20,21 @@ class smallLocker extends locker { // implements lockerInterface
 
 	}
 
+//	Check How Many Lockers Available
+	public static void lockersAvailable(smallLocker[] arr) { // lockers.java dan locker.java
+		int foundSmall = 0;
+		// int foundMed = 0;
+		// int foundLarge = 0;
+		System.out.println("\nAvailable Lockers\n-----------------");
+		for (smallLocker x : arr) {
+			if (x.availability == true)
+				foundSmall++;
+		}
+		System.out.println(foundSmall); // use for lockers to display on "Available" label
+	}
+
 	// void check(int availability[]) {
-	// 	System.out.println(Arrays.toString(availability));
+	// System.out.println(Arrays.toString(availability));
 	// }
 
 }
@@ -45,7 +56,7 @@ class mediumLocker extends locker {
 	}
 
 	// void check(int availability[]) {
-	// 	System.out.println(Arrays.toString(availability));
+	// System.out.println(Arrays.toString(availability));
 	// }
 }
 
@@ -64,4 +75,5 @@ class largeLocker extends locker {
 
 	largeLocker(int id, String colour, int door, boolean availability, int shelves) {
 	}
+
 }
