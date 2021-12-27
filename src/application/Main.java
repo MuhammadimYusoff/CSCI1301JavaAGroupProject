@@ -20,6 +20,7 @@ public class Main {
 //		Owner owner1 = new Owner("testing", 123, 011100, 123, "testing", 45.0);
 //		Owner owner2 = new Owner("testing", 1234, 011100, 123, "testing", 45.0);
 //		Owner owner3 = new Owner("testing", 12345, 011100, 123, "testing", 45.0);
+		Owner owner = new Owner("Stringing", 123, 011101010, 123, "3", 0.0);
 
 //		largeLocker large = new largeLocker();
 //		System.out.println("Number of Doors: " + large.door);

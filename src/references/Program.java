@@ -38,11 +38,6 @@ public class Program {
 		System.out.println(found); // use for lockers to display on "Available" label
 	}
 
-	/*
-	 * Change to loop to able have ownerID and locker.id to be compared in one loop
-	 * if possible.
-	 */
-//Check How Many Lockers Rented by a user to be display on Student Profile.
 	public static void lockersRented(lockers[] arr, int id) {
 		int ownerID = owner.getId();
 		int found = 0;
@@ -54,6 +49,12 @@ public class Program {
 		System.out.println("Rented Small Locker: " + found); // use for lockers to display on "Available" label
 	}
 }
+
+/*
+ * Change to loop to able have ownerID and locker.id to be compared in one loop
+ * if possible.
+ */
+//Check How Many Lockers Rented by a user to be display on Student Profile.
 
 // 		Checkout Price.
 //	public static void carSelection(Car[] arr, String carName, int hours) {
