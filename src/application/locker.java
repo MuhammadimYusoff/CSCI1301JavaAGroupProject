@@ -1,64 +1,69 @@
 package application;
 
+import references.owner;
+
 public class locker {
-//	private int number = 0;
+	private int id = 0; // locker id will be replaced with owner id if they rent it
 	private String color; // = "Red";
 	private int door = 0;
-//	private char status = 'x'; // Check availability on the 'availability' value, explanation on lockerInterface.java
-//	private int availability = 1; // Availability will replace to user ID number if they rent, then will replace
+	private boolean availability = true; // Availability will replace to user ID number if they rent, then will replace
 	// back by 1 if not rent.
 
 	locker() {
 
 	}
 
-	locker(int number, String color, int door, int availability) { // char status
-//		this.number = number;
-		this.color = color;
-		this.door = door;
-//		this.status = status;
-//		this.availability = availability;
+	locker(int id, String color, int door, boolean availability) {
+		this.id = id; // this locker id will be replaced with user rent it.
+		this.color = color; // only show the color
+		this.door = door; // only show the door
+		this.availability = availability; // check the locker availability
 	}
 
-//	public int getNumber() {
-//		return number;
-//	}
-//
-//	public void setNumber(int number) {
-//		this.number = number;
-//	}
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	}
 
 	public String getColor() {
 		return color;
 	}
 
-	public void setColor(String color) {
-		this.color = color;
-	}
+//	public void setColor(String color) {
+//		this.color = color;
+//	}
 
 	public int getDoor() {
 		return door;
 	}
 
-	public void setDoor(int door) {
-		this.door = door;
+//	public void setDoor(int door) {
+//		this.door = door;
+//	}
+
+	public boolean getAvailability() {
+		return availability;
 	}
 
-//	public char getStatus() {
-//		return status;
-//	}
-//
-//	public void setStatus(char status) {
-//		this.status = status;
-//	}
+	public void setAvailability(boolean availability) {
+		this.availability = availability;
+	}
 
-//	public int getAvailability() {
-//		return availability;
-//	}
-//
-//	public void setAvailability(int availability) {
-//		this.availability = availability;
-//	}
+	public static void lockerRented(locker[] arr, int id) {
+		int ownerID = owner.getId(); // get userID to compare.
+		int found = 0;
+		System.out.println("\nRented Lockers\n-----------------");
+		for (locker x : arr) {
+			// x.getId(): get the locker id and compare it to ownerID, if it's the same that
+			// means the user rented it.
+			if (x.getId() == ownerID)
+				found++;
+		}
+		System.out.println("Rented Locker: " + found); // use for lockers to display on "Available" label
+	}
 
 //public static void main(String[] args) {
 //	// TODO Auto-generated method stub

@@ -1,35 +1,31 @@
 package application;
 
-import java.util.Date;
 import java.util.Scanner;
 
 public class Owner {
 
-	private String name;
-	private int id;
-	private int phoneNo;
-	private int pin;
-	private Date date;
-	private String duriation;
+	private String name; // Owner name
+	private int id; // Owner ID, this will be use to check for rented locker
+	private int phoneNo; // Owner phone number
+	private int pin; // Owner password
+	private byte day;
 	private double totalRent;
 
 	public Owner() {
-		date = new Date();
 	}
 
+	// Testing Owner class
 	public Owner(int id, int pin) {
-		date = new Date();
 		this.id = id;
 		this.pin = pin;
 	}
 
-	public Owner(String name, int id, int phoneNo, int pin, String duriation, double totalRent) {
-		date = new Date();
+	public Owner(String name, int id, int phoneNo, int pin, byte day, double totalRent) {
 		this.name = name;
 		this.id = id;
 		this.phoneNo = phoneNo;
 		this.pin = pin;
-		this.duriation = duriation;
+		this.day = day;
 		this.totalRent = totalRent;
 	}
 
@@ -61,16 +57,12 @@ public class Owner {
 		this.pin = pin;
 	}
 
-	public Date getDate() {
-		return date;
+	public byte getDay() {
+		return day;
 	}
 
-	public String getDuriation() {
-		return duriation;
-	}
-
-	public void setDuriation(String duriation) {
-		this.duriation = duriation;
+	public void setDay(byte day) {
+		this.day = day;
 	}
 
 	public double getTotalRent() {
