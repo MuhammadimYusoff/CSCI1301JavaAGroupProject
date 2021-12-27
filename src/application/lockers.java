@@ -18,42 +18,50 @@ class smallLocker extends locker { // implements lockerInterface
 
 	}
 
-	smallLocker(int id, String color, int door, int availability) { // , char status
+	smallLocker(int id, String color, int door, boolean availability) { // , char status
 
 	}
 
-	void check(int availability[]) {
-		System.out.println(Arrays.toString(availability));
-	}
+	// void check(int availability[]) {
+	// 	System.out.println(Arrays.toString(availability));
+	// }
 
 }
 
 class mediumLocker extends locker {
-//	int number = (int) Math.round(Math.random() * 100);
+	int id;
 	final String color = "Brown";
 	final int door = 3;
 	double price = 40.00;
-	int[] availability = { 1, 1, 1 };
+	boolean availability = true;
+	// int[] availability = { 1, 1, 1 };
+	int shelves = 2;
 
 	mediumLocker() {
 
 	}
 
-	mediumLocker(int number, String colour, int door, char status, int availability, int shelves) {
+	mediumLocker(int id, String colour, int door, boolean availability, int shelves) {
 	}
+
+	// void check(int availability[]) {
+	// 	System.out.println(Arrays.toString(availability));
+	// }
 }
 
 class largeLocker extends locker {
-//	int number = (int) Math.round(Math.random() * 100);
+	int id;
 	final String color = "Gold";
 	final int door = 4;
 	double price = 60.00;
-	int[] availability = { 1, 1, 1 };
+	boolean availability = true;
+	// int[] availability = { 1, 1, 1 };
+	int shelves = 4;
 
 	largeLocker() {
 
 	}
 
-	largeLocker(int number, String colour, int door, char status, int availability, int shelves) {
+	largeLocker(int id, String colour, int door, boolean availability, int shelves) {
 	}
 }
