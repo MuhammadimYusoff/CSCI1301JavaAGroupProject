@@ -109,14 +109,14 @@
             </TextField>
          </children>
       </AnchorPane>
-      <TextField layoutX="512.0" layoutY="84.0" />
+      <TextField fx:id="smallRentDay" layoutX="512.0" layoutY="84.0" />
       <Text layoutX="510.0" layoutY="238.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Number of Days" />
-      <TextField layoutX="512.0" layoutY="248.0" />
-      <TextField layoutX="512.0" layoutY="444.0" />
+      <TextField fx:id="midRentDay" layoutX="512.0" layoutY="248.0" />
+      <TextField fx:id="largeRentDay" layoutX="512.0" layoutY="444.0" />
       <Text layoutX="516.0" layoutY="73.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Number of Days" />
       <Text layoutX="512.0" layoutY="434.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Number of Days" />
-      <Button layoutX="560.0" layoutY="129.0" mnemonicParsing="false" onAction="#smallLockerTotalRent" style="-fx-background-color: #0598ff;" text="CHOOSE" />
-      <Button layoutX="560.0" layoutY="297.0" mnemonicParsing="false" style="-fx-background-color: #0598ff;" text="CHOOSE" />
-      <Button layoutX="560.0" layoutY="487.0" mnemonicParsing="false" style="-fx-background-color: #0598ff;" text="CHOOSE" />
+      <Button fx:id="btnChooseSmall" layoutX="560.0" layoutY="129.0" mnemonicParsing="false" onAction="#smallLockerTotalRent" style="-fx-background-color: #0598ff;" text="CHOOSE" />
+      <Button fx:id="btnChooseMid" layoutX="560.0" layoutY="297.0" mnemonicParsing="false" onAction="#midLockerTotalRent" style="-fx-background-color: #0598ff;" text="CHOOSE" />
+      <Button fx:id="btnChooseLarge" layoutX="560.0" layoutY="487.0" mnemonicParsing="false" onAction="#largeLockerTotalRent" style="-fx-background-color: #0598ff;" text="CHOOSE" />
    </children>
 </AnchorPane>

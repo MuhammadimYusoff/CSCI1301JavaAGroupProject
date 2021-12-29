@@ -35,6 +35,6 @@
             <Font size="21.0" />
          </font>
       </Text>
-      <Button layoutX="466.0" layoutY="336.0" mnemonicParsing="false" text="CHECK OUT" />
+      <Button fx:id="btnCheckout" layoutX="466.0" layoutY="336.0" mnemonicParsing="false" onAction="#checkOut" text="CHECK OUT" />
    </children>
 </AnchorPane>
