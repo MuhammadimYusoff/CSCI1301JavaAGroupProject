@@ -2,29 +2,28 @@ package references;
 
 public class Program {
 	public static void main(String[] args) {
-//		Declare the Lockers to be use
+		// Declare the Lockers to be use
 		lockers[] obj = { (new lockers("smallLocker 1", true, 20, 1)), (new lockers("smallLocker 2", false, 20, 2)),
 				(new lockers("smallLocker 3", true, 20, 3)) };
 
-//		Declare the Owner for the lockers.
+		// Declare the Owner for the lockers.
 		owner Owner = new owner(2);
+		// System.out.println("OwnerID: " + Owner.getId());
 
-//		System.out.println("OwnerID: " + Owner.getId());
+		// Printout Available Lockers can be rented. // Use This
+		// lockersAvailable(obj);
 
-// 		Printout Available Lockers can be rented. // Use This
-//		lockersAvailable(obj);
-
-//		Printout Rented Lockers to Student Profile Screen. // Use This
+		// Printout Rented Lockers to Student Profile Screen. // Use This
 		lockersRented(obj, owner.getId()); // carSelection(obj, carName, rentHours);
 
-// 		Print out all Lockers available (Debug usage)
-// 		System.out.println("All car details\n---------------");
-// 		for(Car x:obj){
-// 		System.out.println(x);
-// }
+		// Print out all Lockers available (Debug usage)
+		// System.out.println("All car details\n---------------");
+		// for(Car x:obj){
+		// System.out.println(x);
+		// }
 	}
 
-//	Check How Many Lockers Available
+	// Check How Many Lockers Available
 	public static void lockersAvailable(lockers[] arr) { // lockers.java dan locker.java
 		int found = 0;
 		// int foundSmall = 0;
@@ -54,26 +53,29 @@ public class Program {
  * Change to loop to able have ownerID and locker.id to be compared in one loop
  * if possible.
  */
-//Check How Many Lockers Rented by a user to be display on Student Profile.
+// Check How Many Lockers Rented by a user to be display on Student Profile.
 
-// 		Checkout Price.
-//	public static void carSelection(Car[] arr, String carName, int hours) {
-//		int count = 0;
-//		for (Car x : arr) {
-//			if (carName.equals(x.name) && x.isAvailable) {
-//				System.out.println("\nThe car you selected is: " + x.name);
-//				System.out.println("Your charges would be approx: $" + (x.pricePerHour) * hours);
-//				System.out.println("Your car will be delivered to your location soon.\nWe wish you a happy journey!!");
-//				break;
-//			} else
-//				count++;
-//		}
-//		if (count == 5) {
-//			System.out.println("\nSorry, the car name you entered is not available at the moment.");
-//		}
-//	}
+// Checkout Price.
+// public static void carSelection(Car[] arr, String carName, int hours) {
+// int count = 0;
+// for (Car x : arr) {
+// if (carName.equals(x.name) && x.isAvailable) {
+// System.out.println("\nThe car you selected is: " + x.name);
+// System.out.println("Your charges would be approx: $" + (x.pricePerHour) *
+// hours);
+// System.out.println("Your car will be delivered to your location soon.\nWe
+// wish you a happy journey!!");
+// break;
+// } else
+// count++;
+// }
+// if (count == 5) {
+// System.out.println("\nSorry, the car name you entered is not available at the
+// moment.");
+// }
+// }
 
-//	Other Codes
+// Other Codes
 /*
  * for (int x : small.availability) { if (x == userid) { found = true; break; }
  * System.out.println(found); }
