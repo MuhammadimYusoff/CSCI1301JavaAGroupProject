@@ -11,7 +11,7 @@ public class owner {
 		return id;
 	}
 
-	public void setId(int id) {
-		this.id = id;
+	public static void setId(int id) {
+		owner.id = id;
 	}
 }

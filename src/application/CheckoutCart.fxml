@@ -2,8 +2,7 @@
 
 <?import javafx.scene.control.Accordion?>
 <?import javafx.scene.control.Button?>
-<?import javafx.scene.image.Image?>
-<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.control.Label?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
@@ -13,28 +12,32 @@
       <Accordion />
       <AnchorPane prefHeight="385.0" prefWidth="269.0" style="-fx-background-color: #0598ff;">
          <children>
-            <Text layoutX="56.0" layoutY="107.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Total price:">
+            <Text layoutX="56.0" layoutY="107.0" strokeType="OUTSIDE" strokeWidth="0.0" text="TOTAL PRICE:">
                <font>
                   <Font size="25.0" />
                </font>
             </Text>
-            <Text layoutX="4.0" layoutY="187.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Proceed your payment to bla bla bla ">
+            <Text layoutX="2.0" layoutY="250.0" strokeType="OUTSIDE" strokeWidth="0.0" text="PROCED TO COUNTER FOR PAYMENT">
                <font>
                   <Font size="16.0" />
                </font>
             </Text>
+            <Label fx:id="totalPrice" layoutX="51.0" layoutY="144.0" text="TotalPrice">
+               <font>
+                  <Font size="38.0" />
+               </font>
+            </Label>
          </children>
       </AnchorPane>
-      <ImageView fitHeight="190.0" fitWidth="175.0" layoutX="269.0" layoutY="98.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@../../../../Downloads/locker1.jpeg" />
-         </image>
-      </ImageView>
-      <Text layoutX="466.0" layoutY="121.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Details:">
+      <Text layoutX="287.0" layoutY="106.0" strokeType="OUTSIDE" strokeWidth="0.0" text="RENT DETAILS:">
          <font>
             <Font size="21.0" />
          </font>
       </Text>
-      <Button fx:id="btnCheckout" layoutX="466.0" layoutY="336.0" mnemonicParsing="false" onAction="#checkOut" text="CHECK OUT" />
+      <Button fx:id="btnCheckout" layoutX="455.0" layoutY="338.0" mnemonicParsing="false" onAction="#checkOut" prefHeight="33.0" prefWidth="104.0" text="CHECK OUT">
+         <font>
+            <Font size="14.0" />
+         </font></Button>
+      <Label fx:id="lblLockerRentDetails" layoutX="287.0" layoutY="162.0" text="Lockers Rent Details" />
    </children>
 </AnchorPane>

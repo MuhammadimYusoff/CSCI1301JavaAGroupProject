@@ -7,7 +7,7 @@ public class Program {
 				(new lockers("smallLocker 3", true, 20, 3)) };
 
 		// Declare the Owner for the lockers.
-		owner Owner = new owner(2);
+//		owner Owner = new owner(2);
 		// System.out.println("OwnerID: " + Owner.getId());
 
 		// Printout Available Lockers can be rented. // Use This

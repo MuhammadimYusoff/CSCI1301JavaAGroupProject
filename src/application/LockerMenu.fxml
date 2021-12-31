@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
@@ -10,113 +12,178 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="527.0" prefWidth="734.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <ImageView fitHeight="144.0" fitWidth="94.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@../../../../Downloads/locker1.jpeg" />
-         </image>
-      </ImageView>
-      <ImageView fitHeight="144.0" fitWidth="94.0" layoutY="186.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@../../../../Downloads/locker1.jpeg" />
-         </image>
-      </ImageView>
-      <ImageView fitHeight="144.0" fitWidth="94.0" layoutY="387.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@../../../../Downloads/locker1.jpeg" />
-         </image>
-      </ImageView>
-      <AnchorPane layoutX="176.0" layoutY="11.0" prefHeight="133.0" prefWidth="305.0" style="-fx-background-color: #0598ff;">
+      <AnchorPane layoutX="7.0" layoutY="10.0" prefHeight="155.0" prefWidth="719.0" style="-fx-background-color: #0598ff;">
          <children>
-            <Text layoutX="8.0" layoutY="28.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Size:" />
-            <TextField layoutX="78.0" layoutY="10.0">
+            <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="3.0" layoutY="2.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@img/2Doors.jpg" />
+               </image>
+            </ImageView>
+            <Text layoutX="173.0" layoutY="45.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Size:">
                <font>
-                  <Font size="10.0" />
-               </font>
-            </TextField>
-            <Text layoutX="7.0" layoutY="58.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Door:" />
-            <Text layoutX="2.0" layoutY="87.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Shelve:" />
-            <Text layoutY="118.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Availablity:" />
-            <TextField layoutX="78.0" layoutY="41.0">
+                  <Font size="16.0" />
+               </font></Text>
+            <Label fx:id="sizeSmall" layoutX="266.0" layoutY="27.0" text="Small">
                <font>
-                  <Font size="10.0" />
+                  <Font size="16.0" />
                </font>
-            </TextField>
-            <TextField layoutX="78.0" layoutY="70.0">
+            </Label>
+            <Text layoutX="172.0" layoutY="71.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Door:">
                <font>
-                  <Font size="10.0" />
-               </font>
-            </TextField>
-            <TextField layoutX="78.0" layoutY="101.0">
+                  <Font size="16.0" />
+               </font></Text>
+            <Label fx:id="doorSmall" layoutX="266.0" layoutY="53.0" text="2 Doors">
                <font>
-                  <Font size="10.0" />
+                  <Font size="16.0" />
                </font>
-            </TextField>
+            </Label>
+            <Text layoutX="172.0" layoutY="98.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Shelve:">
+               <font>
+                  <Font size="16.0" />
+               </font></Text>
+            <Label fx:id="shelveSmall" layoutX="266.0" layoutY="81.0" text="No Shelves">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Text layoutX="171.0" layoutY="126.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Availablity:">
+               <font>
+                  <Font size="16.0" />
+               </font></Text>
+            <Label fx:id="availabilitySmall" layoutX="266.0" layoutY="109.0" text="Ask Management">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Text layoutX="495.0" layoutY="115.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Number of Days">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Text>
+            <TextField fx:id="smallRentDay" layoutX="494.0" layoutY="123.0" prefHeight="25.0" prefWidth="123.0" promptText="Rent Days" />
+            <Button fx:id="btnChooseSmall" accessibleText="Choose Small Locker to Rent" layoutX="626.0" layoutY="122.0" mnemonicParsing="false" onAction="#smallLockerTotalRent" prefHeight="25.0" prefWidth="86.0" style="-fx-background-color: #ffffff;" text="CHOOSE" textAlignment="CENTER" />
          </children>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
       </AnchorPane>
-      <AnchorPane layoutX="176.0" layoutY="186.0" prefHeight="126.0" prefWidth="305.0" style="-fx-background-color: #0598ff;">
+      <AnchorPane layoutX="8.0" layoutY="188.0" prefHeight="155.0" prefWidth="719.0" style="-fx-background-color: #0598ff;">
          <children>
-            <Text layoutX="8.0" layoutY="28.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Size:" />
-            <TextField layoutX="78.0" layoutY="10.0">
+            <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="3.0" layoutY="2.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@img/3Doors.jpg" />
+               </image>
+            </ImageView>
+            <Text layoutX="173.0" layoutY="45.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Size:">
                <font>
-                  <Font size="10.0" />
+                  <Font size="16.0" />
                </font>
-            </TextField>
-            <Text layoutX="7.0" layoutY="58.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Door:" />
-            <Text layoutX="2.0" layoutY="87.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Shelve:" />
-            <Text layoutY="118.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Availablity:" />
-            <TextField layoutX="78.0" layoutY="41.0">
+            </Text>
+            <Label fx:id="sizeSmall1" layoutX="266.0" layoutY="27.0" text="Medium">
                <font>
-                  <Font size="10.0" />
+                  <Font size="16.0" />
                </font>
-            </TextField>
-            <TextField layoutX="78.0" layoutY="70.0">
+            </Label>
+            <Text layoutX="172.0" layoutY="71.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Door:">
                <font>
-                  <Font size="10.0" />
+                  <Font size="16.0" />
                </font>
-            </TextField>
-            <TextField layoutX="78.0" layoutY="101.0">
+            </Text>
+            <Label fx:id="doorSmall1" layoutX="266.0" layoutY="53.0" text="3 Doors">
                <font>
-                  <Font size="10.0" />
+                  <Font size="16.0" />
                </font>
-            </TextField>
+            </Label>
+            <Text layoutX="172.0" layoutY="98.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Shelve:">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Text>
+            <Label fx:id="shelveSmall1" layoutX="266.0" layoutY="81.0" text="2 Shelves">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Text layoutX="171.0" layoutY="126.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Availablity:">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Text>
+            <Label fx:id="availabilityMid" layoutX="266.0" layoutY="109.0" text="Ask Management">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Text layoutX="495.0" layoutY="115.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Number of Days">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Text>
+            <TextField fx:id="midRentDay" layoutX="494.0" layoutY="123.0" prefHeight="25.0" prefWidth="123.0" promptText="Rent Days" />
+            <Button fx:id="btnChooseMid" accessibleText="Choose Small Locker to Rent" layoutX="626.0" layoutY="122.0" mnemonicParsing="false" onAction="#midLockerTotalRent" prefHeight="25.0" prefWidth="86.0" style="-fx-background-color: #ffffff;" text="CHOOSE" textAlignment="CENTER" />
          </children>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
       </AnchorPane>
-      <AnchorPane layoutX="176.0" layoutY="376.0" prefHeight="126.0" prefWidth="305.0" style="-fx-background-color: #0598ff;">
+      <AnchorPane layoutX="7.0" layoutY="365.0" prefHeight="155.0" prefWidth="719.0" style="-fx-background-color: #0598ff;">
          <children>
-            <Text layoutX="8.0" layoutY="28.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Size:" />
-            <TextField layoutX="78.0" layoutY="10.0">
+            <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="3.0" layoutY="2.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@img/4Doors.jpg" />
+               </image>
+            </ImageView>
+            <Text layoutX="173.0" layoutY="45.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Size:">
                <font>
-                  <Font size="10.0" />
+                  <Font size="16.0" />
                </font>
-            </TextField>
-            <Text layoutX="7.0" layoutY="58.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Door:" />
-            <Text layoutX="2.0" layoutY="87.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Shelve:" />
-            <Text layoutY="118.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Availablity:" />
-            <TextField layoutX="78.0" layoutY="41.0">
+            </Text>
+            <Label fx:id="sizeSmall11" layoutX="266.0" layoutY="29.0" text="Large">
                <font>
-                  <Font size="10.0" />
+                  <Font size="16.0" />
                </font>
-            </TextField>
-            <TextField layoutX="78.0" layoutY="70.0">
+            </Label>
+            <Text layoutX="172.0" layoutY="71.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Door:">
                <font>
-                  <Font size="10.0" />
+                  <Font size="16.0" />
                </font>
-            </TextField>
-            <TextField layoutX="78.0" layoutY="101.0">
+            </Text>
+            <Label fx:id="doorSmall11" layoutX="266.0" layoutY="53.0" text="4 Doors">
                <font>
-                  <Font size="10.0" />
+                  <Font size="16.0" />
                </font>
-            </TextField>
+            </Label>
+            <Text layoutX="172.0" layoutY="98.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Shelve:">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Text>
+            <Label fx:id="shelveSmall11" layoutX="266.0" layoutY="81.0" text="4 Shelves">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Text layoutX="171.0" layoutY="126.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Availablity:">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Text>
+            <Label fx:id="availabilityLarge" layoutX="266.0" layoutY="109.0" text="Ask Management">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Text layoutX="495.0" layoutY="115.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Number of Days">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Text>
+            <TextField fx:id="largeRentDay" layoutX="494.0" layoutY="123.0" prefHeight="25.0" prefWidth="123.0" promptText="Rent Days" />
+            <Button fx:id="btnChooseLarge" accessibleText="Choose Small Locker to Rent" layoutX="626.0" layoutY="122.0" mnemonicParsing="false" onAction="#largeLockerTotalRent" prefHeight="25.0" prefWidth="86.0" style="-fx-background-color: #ffffff;" text="CHOOSE" textAlignment="CENTER" />
          </children>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
       </AnchorPane>
-      <TextField fx:id="smallRentDay" layoutX="512.0" layoutY="84.0" />
-      <Text layoutX="510.0" layoutY="238.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Number of Days" />
-      <TextField fx:id="midRentDay" layoutX="512.0" layoutY="248.0" />
-      <TextField fx:id="largeRentDay" layoutX="512.0" layoutY="444.0" />
-      <Text layoutX="516.0" layoutY="73.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Number of Days" />
-      <Text layoutX="512.0" layoutY="434.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Number of Days" />
-      <Button fx:id="btnChooseSmall" layoutX="560.0" layoutY="129.0" mnemonicParsing="false" onAction="#smallLockerTotalRent" style="-fx-background-color: #0598ff;" text="CHOOSE" />
-      <Button fx:id="btnChooseMid" layoutX="560.0" layoutY="297.0" mnemonicParsing="false" onAction="#midLockerTotalRent" style="-fx-background-color: #0598ff;" text="CHOOSE" />
-      <Button fx:id="btnChooseLarge" layoutX="560.0" layoutY="487.0" mnemonicParsing="false" onAction="#largeLockerTotalRent" style="-fx-background-color: #0598ff;" text="CHOOSE" />
    </children>
 </AnchorPane>

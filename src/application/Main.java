@@ -10,13 +10,16 @@ package application;
 
 public class Main {
 	public static void main(String[] args) {
+		Owner own = new Owner();
+		own.login();
+		
+		
+		
 //		Make 3 Owner Object, their own name, pin 
 //		the owner will take their own locker hardcode
 
 //		Owner owner0 = new Owner("Stringing", 123, 011101010, 123, "3", 0.0);
 //		Owner owner1 = new Owner("testing", 123, 011100, 123, "testing", 45.0);
-//		Owner owner2 = new Owner("testing", 1234, 011100, 123, "testing", 45.0);
-//		Owner owner3 = new Owner("testing", 12345, 011100, 123, "testing", 45.0);
 
 //		Declare the lockers in array
 //		smallLocker[] smollLocker = { (new smallLocker(1, "Shiro", 2, false)), (new smallLocker(2, "Kuro", 2, true)),

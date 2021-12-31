@@ -77,19 +77,17 @@ public class Owner {
 
 		Scanner input = new Scanner(System.in);
 
-		this.id = 0000;
-		this.pin = 0000;
+		this.id = 8888;
+		this.pin = 8888;
 
 		System.out.println("enter id and pin: ");
 		int inputId = input.nextInt();
 		int inputPin = input.nextInt();
 
-		if (inputId == this.id && inputPin == this.pin)
-			System.out.println("login right");
-		else
-			System.out.println("wrong id or pin");
-
+//		Checking User Credential
+		String userCredential = (inputId == this.id && inputPin == this.pin) ? "Logged In" : "Wrong ID or PIN";
+			System.out.println(userCredential);
+		input.close();
 		/// this just a trial i'll edit on that later
 	}
-
 }
