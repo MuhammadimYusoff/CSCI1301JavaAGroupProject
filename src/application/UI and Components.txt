@@ -1,0 +1,28 @@
+Screen Name: Login.fxml
+Component: <component> <componentFX:ID> [method]
+	⁃	TextField id
+	⁃	PasswordField password
+	⁃	Label errorSignIn
+	⁃	Button btnSignIn [signIn]
+
+Screen Name: StudentProfile.fxml
+Component: <componentType> <componentFX:ID> [method]
+	⁃	Label lblUserId
+	⁃	Button btnRent [rent]
+
+Screen Name: LockerMenu.fxml
+Component: <component> <componentFX:ID> [method]
+	⁃	TextField smallRentDay
+	-	TextField midRentDay 
+	-	TextField largeRentDay
+ 	⁃	Label availabilitySmall
+ 	⁃	Label availabilityMid
+ 	⁃	Label availabilityLarge
+	-	Button btnChooseSmall [smallLockerTotalRent]
+	-	Button btnChooseMid [midLockerTotalRent]
+	-	Button btnChooseLarge [largeLockerTotalRent]
+
+Screen Name: CheckoutCart.fxml
+Component: <component> <componentFX:ID> [method]
+ 	⁃	Label lblLockerRentDetails
+	⁃	Button btnCheckout [checkOut]
