@@ -1,16 +1,16 @@
-Screen Name: Login.fxml
+Screen Name: Login.fxml [Saddam & Yusoff] <fx:controller="application.Owner">
 Component: <component> <componentFX:ID> [method]
 	⁃	TextField id
 	⁃	PasswordField password
 	⁃	Label errorSignIn
 	⁃	Button btnSignIn [signIn]
 
-Screen Name: StudentProfile.fxml
+Screen Name: StudentProfile.fxml [Siti Aisyah] <fx:controller="application.Owner">
 Component: <componentType> <componentFX:ID> [method]
 	⁃	Label lblUserId
 	⁃	Button btnRent [rent]
 
-Screen Name: LockerMenu.fxml
+Screen Name: LockerMenu.fxml [Fadwa] <fx:controller="application.lockers">
 Component: <component> <componentFX:ID> [method]
 	⁃	TextField smallRentDay
 	-	TextField midRentDay 
@@ -22,7 +22,43 @@ Component: <component> <componentFX:ID> [method]
 	-	Button btnChooseMid [midLockerTotalRent]
 	-	Button btnChooseLarge [largeLockerTotalRent]
 
-Screen Name: CheckoutCart.fxml
+Screen Name: CheckoutCart.fxml [Ramadhani & Yusoff] <fx:controller="application.lockers">
 Component: <component> <componentFX:ID> [method]
  	⁃	Label lblLockerRentDetails
 	⁃	Button btnCheckout [checkOut]
+
+UI Flow:
+Sign In --> StudentProfile --> LockerMenu --> Checkout
+
+WORK CHECK
+Screen, Components and Methods
+*Screen: Login.fxml
+[Login] Button:
+	⁃	Check the User Credential.
+	⁃	signIn() // Saddam <5 Jan>
+	⁃	Check any locker rented before by the user
+	⁃	checkRented() // Recheck when running <Yusoff>
+	⁃	check for any locker that have the same id with the user signed in
+
+*Screen: StudentProfile.fxml
+[Rent] Button:
+	⁃	Check the Availability for all Locker
+	⁃	rent() // Check Available locker to rent <Siti>
+	⁃	Check the availability of all lockers (available == true && id == 1)
+
+*Screen: LockerMenu.fxml
+[Choose] Button: (all buttons have same method)
+	⁃	Calculate the price to be paid.
+	⁃	**LockerTotalRent() // Fadwa
+	⁃	Display Locker Details
+	⁃	**: depend on the button fx:id, the method is the same.
+
+*Screen: CheckoutCart.fxml
+[Checkout] Button
+	⁃	Change chosen locker: 
+	⁃	checkOut() // Ramadhani <5 Jan>
+	⁃	availability == false.
+	⁃	Insert renter id number at id part.
+	⁃	Navigate to StudentProfile Screen.
+	⁃	Display Rented Locker at Student Profile
+	⁃	DialogBox/Popup (“Proceed to counter and payment”)
