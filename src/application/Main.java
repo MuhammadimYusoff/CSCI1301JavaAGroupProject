@@ -1,4 +1,4 @@
-package application;
+// package application;
 
 /*
  * This Main.java File will be divided into 4 Parts Handling:
@@ -8,10 +8,10 @@ package application;
  * 4) Checkout UI
  * */
 
-public class Main {
-	public static void main(String[] args) {
-		Owner own = new Owner();
-		own.login();
+// public class Main {
+// 	public static void main(String[] args) {
+// 		Owner own = new Owner();
+// 		own.login();
 		
 		
 		
@@ -28,11 +28,11 @@ public class Main {
 
 //		System.out.println(smallLocker[0].door);
 
-		mediumLocker[] medLocker = { (new mediumLocker(1, "Shiro", 2, false, 3)),
-				(new mediumLocker(2, "Kuro", 2, true, 3)), (new mediumLocker(3, "Gorudo", 2, true, 3)) };
-		mediumLocker.lockersAvailable(medLocker);
+		// mediumLocker[] medLocker = { (new mediumLocker(1, "Shiro", 2, false, 3)),
+		// 		(new mediumLocker(2, "Kuro", 2, true, 3)), (new mediumLocker(3, "Gorudo", 2, true, 3)) };
+		// mediumLocker.lockersAvailable(medLocker);
 
-		System.out.println(medLocker.toString());
+		// System.out.println(medLocker.toString());
 //		System.out.println(medLocker[1].deepToString());
 
 //		System.out.println(Arrays.deepToString(obj)); // Output: true (available)
@@ -48,5 +48,58 @@ public class Main {
 //		System.out.println(Arrays.toString(small));
 
 //		System.out.println(a);
+// 	}
+// }
+
+package application;
+
+import java.io.IOException;
+
+// Library Import	
+import javafx.application.Application;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.stage.Stage;
+import javafx.scene.Scene;
+
+// This Main will load the stage and show the application.
+public class Main extends Application {
+
+//	Dummy Stage for testing
+	private static Stage test;
+
+//	Start Loading Stage with name "primaryStage"
+	@Override
+	public void start(Stage primaryStage) {
+		try {
+//			Loading Dummy Stage
+			test = primaryStage;
+			primaryStage.setResizable(false);
+			
+//			Loading Real Stage
+			Parent root = FXMLLoader.load(getClass().getResource("Login.fxml"));
+			Scene scene = new Scene(root,600,400);
+			primaryStage.setTitle("Locker Rental System");
+			primaryStage.setScene(scene);
+			primaryStage.show();
+		} catch(Exception e) {
+			e.printStackTrace();
+		}
+	}
+	
+//	Change Scene Method to Next Stage (it is reusable as we not hardcoded the fxml name here.)
+//	public void changeScene(String fxml) throws IOException {
+//		Parent pane = FXMLLoader.load(getClass().getResource(fxml)); // the resource will be pass from the class that have the fxml name
+//		test.getScene().setRoot(pane);
+//	}
+
+	public void StudentProfile(String fxml) throws IOException {
+		Parent pane = FXMLLoader.load(getClass().getResource(fxml)); // the resource will be pass from the class that have the fxml name
+		test.getScene().setRoot(pane);
+	}
+	
+//	Main Method
+	public static void main(String[] args) {
+		launch(args);
 	}
 }
