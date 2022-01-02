@@ -1,0 +1,2 @@
+JavaFX communication between controllers
+https://www.youtube.com/watch?v=wxhGKR3PQpo
