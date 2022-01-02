@@ -64,6 +64,8 @@ public class locker {
 		}
 		System.out.println("Rented Locker: " + found); // use for lockers to display on "Available" label
 	}
+	
+	
 
 //public static void main(String[] args) {
 //	// TODO Auto-generated method stub
