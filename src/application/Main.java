@@ -2,7 +2,6 @@ package application;
 
 import java.io.IOException;
 
-//Library Import	
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -11,8 +10,7 @@ import javafx.stage.Stage;
 
 // This Main will load the stage and show the application.
 public class Main extends Application {
-
-	// Dummy Stage for testing
+//Dummy Stage for testing
 	private static Stage test;
 
 	// Start Loading Stage with name "primaryStage"
@@ -34,13 +32,13 @@ public class Main extends Application {
 		}
 	}
 
-	// Change Scene Method to Next Stage (it is reusable as we not hardcoded the
-	// fxml name here.)
-	// public void changeScene(String fxml) throws IOException {
-	// Parent pane = FXMLLoader.load(getClass().getResource(fxml)); // the resource
-	// will be pass from the class that have the fxml name
-	// test.getScene().setRoot(pane);
-	// }
+// Change Scene Method to Next Stage (it is reusable as we not hardcoded the
+// fxml name here.)
+	public void changeScene(String fxml) throws IOException {
+		Parent pane = FXMLLoader.load(getClass().getResource(fxml)); // the resource will be pass from the class that
+																		// have the fxml name
+		test.getScene().setRoot(pane);
+	}
 
 	public void StudentProfile(String fxml) throws IOException {
 		Parent pane = FXMLLoader.load(getClass().getResource(fxml)); // the resource will be pass from the class that
@@ -48,12 +46,13 @@ public class Main extends Application {
 		test.getScene().setRoot(pane);
 	}
 
-	// Main Method
+//// Main Method
 	public static void main(String[] args) {
 		launch(args);
 	}
 }
 
+//////////////////////////////Code Waste Part 1 ////////////////////////////////////////
 /*
  * This Main.java File will be divided into 4 Parts Handling: 1) Sign In 2) User
  * Dashboard 3) Locker Rent UI 4) Checkout UI
