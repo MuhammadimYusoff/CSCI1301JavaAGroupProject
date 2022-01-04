@@ -12,7 +12,7 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="527.0" prefWidth="734.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.lockers">
    <children>
-      <AnchorPane layoutX="7.0" layoutY="10.0" prefHeight="155.0" prefWidth="719.0" style="-fx-background-color: #0598ff;">
+      <AnchorPane layoutX="7.0" layoutY="10.0" prefHeight="155.0" prefWidth="719.0" style="-fx-background-color: #30D5C8;">
          <children>
             <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="3.0" layoutY="2.0" pickOnBounds="true" preserveRatio="true">
                <image>
@@ -67,7 +67,7 @@
             <Insets />
          </opaqueInsets>
       </AnchorPane>
-      <AnchorPane layoutX="8.0" layoutY="188.0" prefHeight="155.0" prefWidth="719.0" style="-fx-background-color: #0598ff;">
+      <AnchorPane layoutX="8.0" layoutY="188.0" prefHeight="155.0" prefWidth="719.0" style="-fx-background-color: #30D5C8;">
          <children>
             <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="3.0" layoutY="2.0" pickOnBounds="true" preserveRatio="true">
                <image>
@@ -126,7 +126,7 @@
             <Insets />
          </opaqueInsets>
       </AnchorPane>
-      <AnchorPane layoutX="7.0" layoutY="365.0" prefHeight="155.0" prefWidth="719.0" style="-fx-background-color: #0598ff;">
+      <AnchorPane layoutX="7.0" layoutY="365.0" prefHeight="155.0" prefWidth="719.0" style="-fx-background-color: #30D5C8;">
          <children>
             <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="3.0" layoutY="2.0" pickOnBounds="true" preserveRatio="true">
                <image>

@@ -6,16 +6,16 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="610.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller = "application.lockers">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="610.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.lockers">
    <children>
-      <AnchorPane prefHeight="400.0" prefWidth="172.0" style="-fx-background-color: #0598ff;" />
+      <AnchorPane prefHeight="400.0" prefWidth="172.0" style="-fx-background-color: #30D5C8;" />
       <Text layoutX="393.0" layoutY="181.0" strokeType="OUTSIDE" strokeWidth="0.0" />
       <Text layoutX="263.0" layoutY="97.0" strokeType="OUTSIDE" strokeWidth="0.0" text="No locker has been rent yet.">
          <font>
             <Font size="21.0" />
          </font>
       </Text>
-      <Button fx:id="btnRent" layoutX="506.0" layoutY="346.0" mnemonicParsing="false" onAction="#rent" prefHeight="39.0" prefWidth="88.0" style="-fx-background-color: #0598ff;" text="Rent">
+      <Button fx:id="btnRent" layoutX="506.0" layoutY="346.0" mnemonicParsing="false" onAction="#rent" prefHeight="39.0" prefWidth="88.0" style="-fx-background-color: #30D5C8;" text="Rent">
          <font>
             <Font size="16.0" />
          </font></Button>

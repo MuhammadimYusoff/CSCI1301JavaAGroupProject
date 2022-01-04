@@ -10,7 +10,7 @@
 <AnchorPane prefHeight="385.0" prefWidth="573.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.lockers">
    <children>
       <Accordion />
-      <AnchorPane prefHeight="385.0" prefWidth="269.0" style="-fx-background-color: #0598ff;">
+      <AnchorPane prefHeight="385.0" prefWidth="269.0" style="-fx-background-color: #30D5C8;">
          <children>
             <Text layoutX="56.0" layoutY="107.0" strokeType="OUTSIDE" strokeWidth="0.0" text="TOTAL PRICE:">
                <font>
