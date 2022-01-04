@@ -38,7 +38,7 @@
       </AnchorPane>
       <AnchorPane layoutX="336.0" layoutY="1.0" prefHeight="400.0" prefWidth="289.0">
          <children>
-            <PasswordField id="PassId" fx:id="password" layoutX="88.0" layoutY="222.0" prefHeight="25.0" prefWidth="149.0" promptText="Password" />
+            <PasswordField id="PassId" fx:id="password" layoutX="88.0" layoutY="222.0" prefHeight="26.0" prefWidth="160.0" promptText="Password" />
             <TextField id="UserId" fx:id="id" layoutX="88.0" layoutY="149.0" promptText="ID" />
             <Text layoutX="27.0" layoutY="172.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ID">
                <font>

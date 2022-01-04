@@ -1,7 +1,5 @@
 package application;
 
-import java.util.Scanner;
-
 public class Owner {
 
 	private String name; // Owner name
@@ -57,6 +55,10 @@ public class Owner {
 		this.pin = pin;
 	}
 
+	public int getPin() {
+		return pin;
+	}
+
 	public byte getDay() {
 		return day;
 	}
@@ -73,21 +75,21 @@ public class Owner {
 		this.totalRent = totalRent;
 	}
 
-	public void login() {
-
-		Scanner input = new Scanner(System.in);
-
-		this.id = 8888;
-		this.pin = 8888;
-
-		System.out.println("enter id and pin: ");
-		int inputId = input.nextInt();
-		int inputPin = input.nextInt();
-
-//		Checking User Credential
-		String userCredential = (inputId == this.id && inputPin == this.pin) ? "Logged In" : "Wrong ID or PIN";
-			System.out.println(userCredential);
-		input.close();
-		/// this just a trial i'll edit on that later
-	}
+//	public void login() {
+//
+//		Scanner input = new Scanner(System.in);
+//
+//		this.id = 8888;
+//		this.pin = 8888;
+//
+//		System.out.println("enter id and pin: ");
+//		int inputId = input.nextInt();
+//		int inputPin = input.nextInt();
+//
+////		Checking User Credential
+//		String userCredential = (inputId == this.id && inputPin == this.pin) ? "Logged In" : "Wrong ID or PIN";
+//			System.out.println(userCredential);
+//		input.close();
+//		/// this just a trial i'll edit on that later
+//	}
 }
