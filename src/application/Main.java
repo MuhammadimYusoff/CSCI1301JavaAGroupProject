@@ -40,13 +40,13 @@ public class Main extends Application {
 		test.getScene().setRoot(pane);
 	}
 
-	public void StudentProfile(String fxml) throws IOException {
-		Parent pane = FXMLLoader.load(getClass().getResource(fxml)); // the resource will be pass from the class that
-																		// have the fxml name
-		test.getScene().setRoot(pane);
-	}
+//	public void StudentProfile(String fxml) throws IOException {
+//		Parent pane = FXMLLoader.load(getClass().getResource(fxml)); // the resource will be pass from the class that
+//																		// have the fxml name
+//		test.getScene().setRoot(pane);
+//	}
 
-//// Main Method
+//	Main Method
 	public static void main(String[] args) {
 		launch(args);
 	}
