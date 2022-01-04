@@ -6,6 +6,7 @@ Component: <component> <componentFX:ID> [method]
 	⁃	Button btnSignIn [signIn]
 
 Screen Name: StudentProfile.fxml [Siti Aisyah] <fx:controller="application.Owner">
+StudentProfileController
 Component: <componentType> <componentFX:ID> [method]
 	⁃	Label lblUserId
 	⁃	Button btnRent [rent]
