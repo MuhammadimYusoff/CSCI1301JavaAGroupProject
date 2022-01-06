@@ -1,5 +1,5 @@
 # Java Project Group JavaA
-Hello Sir, this project developed by Members of Group JavaA:
+Hello Sir, this project developed by Members of Group Java A:
 > This project is for Subject CSCI 1301, Lecturer Sir AMIR 'AATIEFF BIN AMIR HUSSIN.
 
 ## Group Members:-
