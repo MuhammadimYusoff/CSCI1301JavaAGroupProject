@@ -4,66 +4,42 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.PasswordField?>
 <?import javafx.scene.control.TextField?>
-<?import javafx.scene.image.Image?>
-<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.LoginController">
    <children>
-      <AnchorPane layoutY="-3.0" prefHeight="407.0" prefWidth="345.0" style="-fx-background-color: #30D5C8;">
+      <AnchorPane layoutY="-2.0" prefHeight="407.0" prefWidth="345.0" style="-fx-background-color: #0598ff;">
          <children>
-            <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="94.0" layoutY="39.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@img/IIUMLogo.png" />
-               </image>
-            </ImageView>
-            <Text layoutX="26.0" layoutY="298.0" strokeType="OUTSIDE" strokeWidth="0.0" text=" LOCKER RENTAL" textAlignment="CENTER">
+            <Text layoutX="96.0" layoutY="179.0" strokeType="OUTSIDE" strokeWidth="0.0" text="IIUM MASJID">
                <font>
-                  <Font size="38.0" />
+                  <Font name="Arial Narrow" size="31.0" />
                </font>
             </Text>
-            <Text layoutX="129.0" layoutY="256.0" strokeType="OUTSIDE" strokeWidth="0.0" text="IIUM" textAlignment="CENTER">
+            <Text layoutX="68.0" layoutY="247.0" strokeType="OUTSIDE" strokeWidth="0.0" text="LOCKER RENTAL">
                <font>
-                  <Font size="38.0" />
-               </font>
-            </Text>
-            <Text layoutX="102.0" layoutY="349.0" strokeType="OUTSIDE" strokeWidth="0.0" text="SYSTEM" textAlignment="CENTER">
-               <font>
-                  <Font size="38.0" />
+                  <Font size="31.0" />
                </font>
             </Text>
          </children>
       </AnchorPane>
-      <AnchorPane layoutX="336.0" layoutY="1.0" prefHeight="400.0" prefWidth="289.0">
+      <AnchorPane fx:id="button" layoutX="336.0" layoutY="2.0" prefHeight="400.0" prefWidth="289.0">
          <children>
-            <PasswordField id="PassId" fx:id="password" layoutX="88.0" layoutY="222.0" prefHeight="25.0" prefWidth="149.0" promptText="Password" />
-            <TextField id="UserId" fx:id="id" layoutX="88.0" layoutY="149.0" promptText="ID" />
-            <Text layoutX="27.0" layoutY="172.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ID">
+            <PasswordField id="PassId" fx:id="PassId" layoutX="88.0" layoutY="220.0" promptText="Password" />
+            <TextField id="UserId" fx:id="UserId" layoutX="88.0" layoutY="148.0" promptText="ID" />
+            <Text layoutX="51.0" layoutY="172.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ID">
                <font>
                   <Font size="21.0" />
                </font>
             </Text>
-            <Text layoutX="27.0" layoutY="244.0" strokeType="OUTSIDE" strokeWidth="0.0" text="PIN">
+            <Text layoutX="45.0" layoutY="244.0" strokeType="OUTSIDE" strokeWidth="0.0" text="PIN">
                <font>
                   <Font size="21.0" />
                </font>
             </Text>
-            <Button fx:id="btnSignIn" layoutX="188.0" layoutY="333.0" mnemonicParsing="false" onAction="#signIn" prefHeight="36.0" prefWidth="80.0" style="-fx-background-color: #30D5C8;" text="SIGN IN">
-               <font>
-                  <Font name="System Bold" size="14.0" />
-               </font></Button>
-            <Text layoutX="103.0" layoutY="119.0" strokeType="OUTSIDE" strokeWidth="0.0" text="WELCOME!">
-               <font>
-                  <Font size="24.0" />
-               </font>
-            </Text>
-            <Label fx:id="errorSignIn" layoutX="37.0" layoutY="339.0">
-               <font>
-                  <Font size="16.0" />
-               </font>
-            </Label>
+            <Button fx:id="loginButton" layoutX="137.0" layoutY="284.0" mnemonicParsing="false" onAction="#userLogin" style="-fx-background-color: #0598ff;" text="Log in" />
+            <Label fx:id="errorSignIn" layoutX="88.0" layoutY="320.0" prefHeight="21.0" prefWidth="187.0" />
          </children>
       </AnchorPane>
    </children>

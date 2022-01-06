@@ -7,12 +7,37 @@ package application;
  * 3) Locker Rent UI
  * 4) Checkout UI
  * */
+import java.io.IOException;
 
-public class Main {
+import javafx.application.Application;
+import javafx.fxml.FXMLLoader;
+import javafx.stage.Stage;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+
+public class Main extends Application {
+	private static Stage test;
+	@Override
+	public void start(Stage primaryStage) {	
+		try {
+			Parent root = FXMLLoader.load(getClass().getResource("Login.fxml"));
+			test = primaryStage;
+	        primaryStage.setScene(new Scene(root));
+	        primaryStage.show();
+	        primaryStage.setTitle("StudentProfile Login");
+		} catch(Exception e) {
+			e.printStackTrace();
+		}
+	}
+	public void changeScene(String fxml) throws IOException {
+		Parent pane = FXMLLoader.load(getClass().getResource(fxml)); // the resource will be pass from the class that have the fxml name
+		test.getScene().setRoot(pane);
+	}
+	
 	public static void main(String[] args) {
-		Owner own = new Owner();
-		own.login();
-		
+		launch(args);
+	}
+}
 		
 		
 //		Make 3 Owner Object, their own name, pin 
@@ -28,11 +53,11 @@ public class Main {
 
 //		System.out.println(smallLocker[0].door);
 
-		mediumLocker[] medLocker = { (new mediumLocker(1, "Shiro", 2, false, 3)),
-				(new mediumLocker(2, "Kuro", 2, true, 3)), (new mediumLocker(3, "Gorudo", 2, true, 3)) };
-		mediumLocker.lockersAvailable(medLocker);
+//		mediumLocker[] medLocker = { (new mediumLocker(1, "Shiro", 2, false, 3)),
+//				(new mediumLocker(2, "Kuro", 2, true, 3)), (new mediumLocker(3, "Gorudo", 2, true, 3)) };
+//		mediumLocker.lockersAvailable(medLocker);
 
-		System.out.println(medLocker.toString());
+//		System.out.println(medLocker.toString());
 //		System.out.println(medLocker[1].deepToString());
 
 //		System.out.println(Arrays.deepToString(obj)); // Output: true (available)
@@ -48,5 +73,5 @@ public class Main {
 //		System.out.println(Arrays.toString(small));
 
 //		System.out.println(a);
-	}
-}
+//	}
+
