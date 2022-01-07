@@ -15,12 +15,12 @@ import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
 public class LoginController {
-//	Declare the Parent, Stage and Scenes
+	/***************** Scene Parent, Stage and Scene *******************/
 	private Stage stage;
 	private Scene scene;
 	private Parent root;
 
-//	Scene Components
+	/***************** Scene Components *******************/
 	@FXML
 	private TextField id;
 	@FXML
@@ -46,7 +46,7 @@ public class LoginController {
 //		Calling "displayName" method from Scene2 to pass the username
 		StudentProfileController.displayName(username);
 
-//		root = FXMLLoader.load(getClass().getResource("Scene2.fxml")); // Not needed
+//		root = FXMLLoader.load(getClass().getResource("StudentProfile.fxml")); // Not needed
 		stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
 		scene = new Scene(root);
 		stage.setScene(scene);

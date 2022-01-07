@@ -13,12 +13,12 @@ import javafx.scene.control.Label;
 import javafx.stage.Stage;
 
 public class StudentProfileController {
-//	Declare the Parent, Stage and Scenes
+	/***************** Scene Parent, Stage and Scene *******************/
 	private Stage stage;
 	private Scene scene;
 	private Parent root;
 
-//	Scene Components
+	/***************** Scene Components *******************/
 	@FXML
 	private Label lblUserId;
 	@FXML
@@ -27,7 +27,7 @@ public class StudentProfileController {
 	/***************** Scene Methods *******************/
 //	Create a Method to Change the Label Text
 	public void displayName(String username) {
-		lblUserId.setText(username + "\nto Locker Rental System!");
+		lblUserId.setText(username + " to Locker Rental System!");
 	}
 
 	public void rent(ActionEvent event) throws IOException {

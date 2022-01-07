@@ -29,7 +29,7 @@ Component: <component> <componentFX:ID> [method]
 	⁃	Button btnCheckout [checkOut]
 
 UI Flow:
-Sign In --> StudentProfile --> LockerMenu --> Checkout
+Sign In --> StudentProfile --> LockerMenu --> Checkout --> StudentProfile
 
 WORK CHECK
 Screen, Components and Methods

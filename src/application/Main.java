@@ -11,7 +11,7 @@ public class Main extends Application {
 	public void start(Stage primaryStage) {
 		try {
 			Parent root = FXMLLoader.load(getClass().getResource("Login.fxml"));
-			Scene scene = new Scene(root, 300, 300);
+			Scene scene = new Scene(root, 700, 400);
 //			scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
 			primaryStage.setScene(scene);
 			primaryStage.show();
@@ -25,52 +25,7 @@ public class Main extends Application {
 	}
 }
 
-///////////////////////////// CODE WASTE PART 2 ///////////////////////
-// This Main will load the stage and show the application.
-//public class Main extends Application {
-////Dummy Stage for testing
-//	private static Stage test;
-//
-//	// Start Loading Stage with name "primaryStage"
-//	@Override
-//	public void start(Stage primaryStage) {
-//		try {
-//			// Loading Dummy Stage
-//			test = primaryStage;
-//			primaryStage.setResizable(false);
-//
-//			// Loading Real Stage
-//			Parent root = FXMLLoader.load(getClass().getResource("Login.fxml"));
-//			Scene scene = new Scene(root, 600, 400);
-//			primaryStage.setTitle("Locker Rental System");
-//			primaryStage.setScene(scene);
-//			primaryStage.show();
-//		} catch (Exception e) {
-//			e.printStackTrace();
-//		}
-//	}
-//
-//// Change Scene Method to Next Stage (it is reusable as we not hardcoded the
-//// fxml name here.)
-//	public void changeScene(String fxml) throws IOException {
-//		Parent pane = FXMLLoader.load(getClass().getResource(fxml)); // the resource will be pass from the class that
-//																		// have the fxml name
-//		test.getScene().setRoot(pane);
-//	}
-
-//	public void StudentProfile(String fxml) throws IOException {
-//		Parent pane = FXMLLoader.load(getClass().getResource(fxml)); // the resource will be pass from the class that
-//																		// have the fxml name
-//		test.getScene().setRoot(pane);
-//	}
-
-//	Main Method
-//	public static void main(String[] args) {
-//		launch(args);
-//	}
-//}
-
-//////////////////////////////Code Waste Part 1 ////////////////////////////////////////
+//////////////////////////////Code Waste ////////////////////////////////////////
 /*
  * This Main.java File will be divided into 4 Parts Handling: 1) Sign In 2) User
  * Dashboard 3) Locker Rent UI 4) Checkout UI
