@@ -3,12 +3,14 @@ package application;
 import java.io.IOException;
 
 import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
 public class CheckoutCartController {
@@ -17,9 +19,12 @@ public class CheckoutCartController {
 	private Scene scene;
 	private Parent root;
 
+
 	/***************** Scene Components *******************/
 	private Label lblLockerRentDetails;
 	private Button btnCheckout;
+	@FXML
+	private Label totalPrice; 
 
 	/***************** Scene Methods *******************/
 	public void checkOut(ActionEvent event) throws IOException {
@@ -34,4 +39,11 @@ public class CheckoutCartController {
 		stage.setScene(scene);
 		stage.show();
 	}
+
+	
+	public void displayRent(double totalPayment) {
+		totalPrice.setText("total Payment is: " + totalPayment);
+	}
+		
+	
 }
