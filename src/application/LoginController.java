@@ -15,32 +15,36 @@ import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
 public class LoginController {
-
-	@FXML
-	TextField id;
-	@FXML
-	PasswordField password;
-	@FXML
-	Label errorSignIn;
-	@FXML
-	Button btnSignIn;
-
+//	Declare the Parent, Stage and Scenes
 	private Stage stage;
 	private Scene scene;
 	private Parent root;
 
+//	Scene Components
+	@FXML
+	private TextField id;
+	@FXML
+	private PasswordField password;
+	@FXML
+	private Label errorSignIn;
+	@FXML
+	private Button btnSignIn;
+
+	/***************** Scene Methods *******************/
 	public void signIn(ActionEvent event) throws IOException {
+
 		System.out.println("Check Login");
+		String username = id.getText();
 
 //		Declare an FXMLLoader with "loader" as name and use it as root component
-		FXMLLoader loader = new FXMLLoader(getClass().getResource("Scene2.fxml"));
+		FXMLLoader loader = new FXMLLoader(getClass().getResource("StudentProfile.fxml"));
 		root = loader.load();
 
 //		Create Scene2 Instance Controller to load Scene 2, This allow to access the Methods in Scene 2
 		StudentProfileController StudentProfileController = loader.getController();
 
 //		Calling "displayName" method from Scene2 to pass the username
-		StudentProfileController.displayName(id);
+		StudentProfileController.displayName(username);
 
 //		root = FXMLLoader.load(getClass().getResource("Scene2.fxml")); // Not needed
 		stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
