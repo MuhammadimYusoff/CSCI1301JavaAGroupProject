@@ -1,5 +1,7 @@
 package application;
 
+import java.io.IOException;
+
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -7,20 +9,24 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 
 public class Main extends Application {
-
+	private static Stage test;
 	@Override
-	public void start(Stage primaryStage) {
+	public void start(Stage primaryStage) {	
+		
 		try {
+			test = primaryStage;
 			Parent root = FXMLLoader.load(getClass().getResource("Login.fxml"));
-			Scene scene = new Scene(root, 700, 400);
-//			scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
-			primaryStage.setScene(scene);
-			primaryStage.show();
-		} catch (Exception e) {
+	        primaryStage.setScene(new Scene(root));
+	        primaryStage.show();
+	        primaryStage.setTitle("StudentProfile Login");
+		} catch(Exception e) {
 			e.printStackTrace();
 		}
 	}
-
+	public void changeScene(String fxml) throws IOException {
+		Parent pane = FXMLLoader.load(getClass().getResource(fxml)); // the resource will be pass from the class that have the fxml name
+		test.getScene().setRoot(pane);
+	}
 	public static void main(String[] args) {
 //		Initialise User Details
 //		Vector ownerDetails = new Vector();
