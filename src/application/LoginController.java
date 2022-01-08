@@ -31,14 +31,15 @@ public class LoginController {
 	private Button btnSignIn;
 
 	/***************** Scene Objects & Variables *******************/
-	Owner Own = new Owner("Omnicron", 8888, "0188888", 8888);
+	Owner Own = new Owner("Omnicron", 8888, "0188888", 8888, 0, 0.0);
+	Owner Own_ = new Owner("saddam", 1234, "0188888", 1234, 0, 0.0);
 
 	/***************** Scene Methods *******************/
 	public void signIn(ActionEvent event) throws IOException {
 		System.out.println("Check User");
 //		Initialise User Details
-		int userID = Own.getId();
-		int userPass = Own.getPin();
+		int userID = Own_.getId();
+		int userPass = Own_.getPin();
 		String userName = Integer.toString(userID);
 		String userPin = Integer.toString(userPass);
 		/* From Sign In Button */
@@ -71,12 +72,10 @@ public class LoginController {
 		}
 
 		else if (id.getText().isEmpty() && password.getText().isEmpty()) {
-			System.out.println("Credential Kosong");
 			errorSignIn.setText("Please Enter Your Credential");
 		}
 
 		else {
-			System.out.println("Ada Input Salah");
 			errorSignIn.setText("Wrong Username or Password");
 		}
 	}
