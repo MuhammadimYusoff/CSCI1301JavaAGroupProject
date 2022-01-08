@@ -2,9 +2,6 @@ package application;
 
 public class Owner {
 
-//	Initialise Owner Details
-	Owner Own = new Owner("Omnicron", 8888, "0188888", 8888, 0, 0.0);
-
 	private String name; // Owner name
 	private int id; // Owner ID, this will be use to check for rented locker
 	private String phoneNo; // Owner phone number
@@ -21,13 +18,11 @@ public class Owner {
 		this.pin = pin;
 	}
 
-	public Owner(String name, int id, String phoneNo, int pin, int day, double totalRent) {
+	public Owner(String name, int id, String phoneNo, int pin) {
 		this.name = name;
 		this.id = id;
 		this.phoneNo = phoneNo;
 		this.pin = pin;
-		this.day = day;
-		this.totalRent = totalRent;
 	}
 
 	public String getName() {
@@ -77,22 +72,4 @@ public class Owner {
 	public void setTotalRent(double totalRent) {
 		this.totalRent = totalRent;
 	}
-
-//	public void login() {
-//
-//		Scanner input = new Scanner(System.in);
-//
-//		this.id = 8888;
-//		this.pin = 8888;
-//
-//		System.out.println("enter id and pin: ");
-//		int inputId = input.nextInt();
-//		int inputPin = input.nextInt();
-//
-////		Checking User Credential
-//		String userCredential = (inputId == this.id && inputPin == this.pin) ? "Logged In" : "Wrong ID or PIN";
-//			System.out.println(userCredential);
-//		input.close();
-//		/// this just a trial i'll edit on that later
-//	}
 }
