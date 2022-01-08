@@ -21,6 +21,12 @@ public class Program {
 		// for(Car x:obj){
 		// System.out.println(x);
 		// }
+
+		//checkOut buttton testing
+//		obj[]
+//		owner owner1 = new owner(111);
+//		lockers
+		lockersAvailable(obj);
 	}
 
 	// Check How Many Lockers Available
