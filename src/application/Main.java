@@ -1,5 +1,7 @@
 package application;
 
+import java.util.Vector;
+
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -23,11 +25,18 @@ public class Main extends Application {
 
 	public static void main(String[] args) {
 //		Initialise User Details
-		Owner Own = new Owner("Omnicron", 8888, "0188888", 8888, 0, 0.0);
+		Vector ownerDetails = new Vector();
+//		Owner Own = new Owner("Omnicron", 8888, "0188888", 8888, 0, 0.0);
 
-		System.out.println("From Main Method");
+		ownerDetails.addElement(Own);
+		System.out.println(ownerDetails);
+
+		System.out.println("Get from Main Method");
 		System.out.println(Own.getId());
 		System.out.println(Own.getPin());
+
+		System.out.println("Vector from Main Method");
+		System.out.println(ownerDetails.toString());
 
 //		Launch Application
 		launch(args);
