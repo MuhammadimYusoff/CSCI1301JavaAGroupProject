@@ -21,12 +21,12 @@ public class Program {
 		// for(Car x:obj){
 		// System.out.println(x);
 		// }
-
 		//checkOut buttton testing
 //		obj[]
 //		owner owner1 = new owner(111);
-//		lockers
-		lockersAvailable(obj);
+
+
+
 	}
 
 	// Check How Many Lockers Available
@@ -53,7 +53,11 @@ public class Program {
 		}
 		System.out.println("Rented Small Locker: " + found); // use for lockers to display on "Available" label
 	}
+
+
 }
+
+
 
 /*
  * Change to loop to able have ownerID and locker.id to be compared in one loop

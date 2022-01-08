@@ -14,4 +14,8 @@ public class owner {
 	public static void setId(int id) {
 		owner.id = id;
 	}
+
+//	public static void main(String[] args){
+//		owner owner1 = new owner(999);
+//	}
 }
