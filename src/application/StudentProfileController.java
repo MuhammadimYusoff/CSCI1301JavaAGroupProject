@@ -24,16 +24,21 @@ public class StudentProfileController {
 	@FXML
 	private Button btnRent;
 
+	/***************** Scene Objects & Variables *******************/
+	private String id;
+
 	/***************** Scene Methods *******************/
 //	Create a Method to Change the Label Text
 	public void displayName(String username) {
-		lblUserId.setText(username + " to Locker Rental System!");
+		id = username;
+		lblUserId.setText("Welcome " + username + " to Locker Rental System!");
 	}
 
 	public void rent(ActionEvent event) throws IOException {
 
 //		Declare an FXMLLoader with "loader" as name and use it as root component
-		FXMLLoader loader = new FXMLLoader(getClass().getResource("Login.fxml"));
+//		FXMLLoader loader = new FXMLLoader(getClass().getResource("Login.fxml"));
+		FXMLLoader loader = new FXMLLoader(getClass().getResource("CheckoutCart.fxml"));
 		root = loader.load();
 
 //		Declare the Parent, Stages and Scenes

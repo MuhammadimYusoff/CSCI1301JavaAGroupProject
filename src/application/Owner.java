@@ -4,9 +4,9 @@ public class Owner {
 
 	private String name; // Owner name
 	private int id; // Owner ID, this will be use to check for rented locker
-	private int phoneNo; // Owner phone number
+	private String phoneNo; // Owner phone number
 	private int pin; // Owner password
-	private byte day;
+	private int day;
 	private double totalRent;
 
 	public Owner() {
@@ -18,7 +18,7 @@ public class Owner {
 		this.pin = pin;
 	}
 
-	public Owner(String name, int id, int phoneNo, int pin, byte day, double totalRent) {
+	public Owner(String name, int id, String phoneNo, int pin, int day, double totalRent) {
 		this.name = name;
 		this.id = id;
 		this.phoneNo = phoneNo;
@@ -43,11 +43,11 @@ public class Owner {
 		this.id = id;
 	}
 
-	public int getPhoneNo() {
+	public String getPhoneNo() {
 		return phoneNo;
 	}
 
-	public void setPhoneNo(int phoneNo) {
+	public void setPhoneNo(String phoneNo) {
 		this.phoneNo = phoneNo;
 	}
 
@@ -59,11 +59,11 @@ public class Owner {
 		return pin;
 	}
 
-	public byte getDay() {
+	public int getDay() {
 		return day;
 	}
 
-	public void setDay(byte day) {
+	public void setDay(int day) {
 		this.day = day;
 	}
 

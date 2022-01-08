@@ -7,6 +7,7 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 
 public class Main extends Application {
+
 	@Override
 	public void start(Stage primaryStage) {
 		try {
@@ -21,11 +22,19 @@ public class Main extends Application {
 	}
 
 	public static void main(String[] args) {
+//		Initialise User Details
+		Owner Own = new Owner("Omnicron", 8888, "0188888", 8888, 0, 0.0);
+
+		System.out.println("From Main Method");
+		System.out.println(Own.getId());
+		System.out.println(Own.getPin());
+
+//		Launch Application
 		launch(args);
 	}
 }
 
-//////////////////////////////Code Waste ////////////////////////////////////////
+////////////////////////////// Code Waste ////////////////////////////////////////
 /*
  * This Main.java File will be divided into 4 Parts Handling: 1) Sign In 2) User
  * Dashboard 3) Locker Rent UI 4) Checkout UI
