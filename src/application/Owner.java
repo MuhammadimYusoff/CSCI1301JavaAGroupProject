@@ -6,8 +6,6 @@ public class Owner {
 	private int id; // Owner ID, this will be use to check for rented locker
 	private String phoneNo; // Owner phone number
 	private int pin; // Owner password
-	private int day;
-	private double totalRent;
 
 	public Owner() {
 	}
@@ -55,21 +53,5 @@ public class Owner {
 
 	public int getPin() {
 		return pin;
-	}
-
-	public int getDay() {
-		return day;
-	}
-
-	public void setDay(int day) {
-		this.day = day;
-	}
-
-	public double getTotalRent() {
-		return totalRent;
-	}
-
-	public void setTotalRent(double totalRent) {
-		this.totalRent = totalRent;
 	}
 }
