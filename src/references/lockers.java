@@ -18,8 +18,16 @@ public class lockers {
 				+ "\n+–----------------+";
 	}
 
-	public void checkOut() {
-		this.isAvailable = false;
-		this.id = owner.getId();
+    public void checkOut(){
+        this.isAvailable = false;
+        this.id = owner.getId();
+    }
+
+	public void display(){
+		System.out.println(this.name);
+		System.out.println(this.isAvailable);
+		System.out.println(this.pricePerHour);
+		System.out.println(this.id);
 	}
+
 }

@@ -14,19 +14,23 @@ public class Program {
 		// lockersAvailable(obj);
 
 		// Printout Rented Lockers to Student Profile Screen. // Use This
-//		lockersRented(obj, owner.getId()); // carSelection(obj, carName, rentHours);
+		// lockersRented(obj, owner.getId()); // carSelection(obj, carName, rentHours);
 
 		// Print out all Lockers available (Debug usage)
 		// System.out.println("All car details\n---------------");
 		// for(Car x:obj){
 		// System.out.println(x);
 		// }
-
-//		checkOut buttton testing
+		//checkOut buttton testing
 //		obj[]
 //		owner owner1 = new owner(111);
-//		lockers
-		lockersAvailable(obj);
+
+		obj[0].display();
+		obj[0].checkOut();
+		obj[0].display();
+
+
+
 	}
 
 	// Check How Many Lockers Available
@@ -53,7 +57,11 @@ public class Program {
 		}
 		System.out.println("Rented Small Locker: " + found); // use for lockers to display on "Available" label
 	}
+
+
 }
+
+
 
 /*
  * Change to loop to able have ownerID and locker.id to be compared in one loop

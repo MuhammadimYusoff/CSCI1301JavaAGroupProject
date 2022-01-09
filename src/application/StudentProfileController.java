@@ -25,10 +25,12 @@ public class StudentProfileController {
 	private Button btnRent;
 
 	/***************** Scene Objects & Variables *******************/
+	private String id;
 
 	/***************** Scene Methods *******************/
 //	Create a Method to Change the Label Text
 	public void displayName(String username) {
+		id = username;
 		lblUserId.setText("Welcome " + username + " to Locker Rental System!");
 	}
 
@@ -36,7 +38,7 @@ public class StudentProfileController {
 
 //		Declare an FXMLLoader with "loader" as name and use it as root component
 //		FXMLLoader loader = new FXMLLoader(getClass().getResource("Login.fxml"));
-		FXMLLoader loader = new FXMLLoader(getClass().getResource("Login.fxml"));
+		FXMLLoader loader = new FXMLLoader(getClass().getResource("CheckoutCart.fxml"));
 		root = loader.load();
 
 //		Declare the Parent, Stages and Scenes

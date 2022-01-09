@@ -1,7 +1,6 @@
 package application;
 
 public class Owner {
-
 	private String name; // Owner name
 	private int id; // Owner ID, this will be use to check for rented locker
 	private String phoneNo; // Owner phone number

@@ -31,6 +31,8 @@ public class CheckoutCartController {
 	/***************** Scene Methods *******************/
 	public void checkOut(ActionEvent event) throws IOException {
 
+
+
 //		Declare an FXMLLoader with "loader" as name and use it as root component
 		FXMLLoader loader = new FXMLLoader(getClass().getResource("StudentProfile.fxml"));
 		root = loader.load();
