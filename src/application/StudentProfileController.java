@@ -33,7 +33,7 @@ public class StudentProfileController {
 	public void rent(ActionEvent event) throws IOException {
 
 //		Declare an FXMLLoader with "loader" as name and use it as root component
-		FXMLLoader loader = new FXMLLoader(getClass().getResource("Login.fxml"));
+		FXMLLoader loader = new FXMLLoader(getClass().getResource("LockerMenu.fxml"));
 		root = loader.load();
 
 //		Declare the Parent, Stages and Scenes

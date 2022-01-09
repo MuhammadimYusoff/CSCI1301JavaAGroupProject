@@ -174,7 +174,7 @@ class largeLocker extends locker {
 			if (x.availability == true)
 				foundLarge++;
 		}
-		System.out.println("Medium Locker Available for rent: " + foundLarge); // use for lockers to display on
+		System.out.println("Large Lockers Available for rent: " + foundLarge); // use for lockers to display on
 																				// "Available" label
 	}
 }

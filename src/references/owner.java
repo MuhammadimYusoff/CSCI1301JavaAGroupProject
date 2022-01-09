@@ -4,7 +4,7 @@ public class owner {
 	private static int id;
 
 	public owner(int id) {
-		this.setId(id);
+		owner.setId(id);
 	}
 
 	public static int getId() {

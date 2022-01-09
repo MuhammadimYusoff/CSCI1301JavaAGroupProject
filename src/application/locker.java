@@ -32,17 +32,17 @@ public class locker {
 		return color;
 	}
 
-//	public void setColor(String color) {
-//		this.color = color;
-//	}
+	public void setColor(String color) {
+		this.color = color;
+	}
 
 	public int getDoor() {
 		return door;
 	}
 
-//	public void setDoor(int door) {
-//		this.door = door;
-//	}
+	public void setDoor(int door) {
+		this.door = door;
+	}
 
 	public boolean getAvailability() {
 		return availability;
@@ -67,41 +67,39 @@ public class locker {
 	
 	
 
-//public static void main(String[] args) {
+public static void main(String[] args) {
 //	// TODO Auto-generated method stub
-//	int a = 3;
-//	
-//	Locker[] smallLocker = new Locker[a];
-//	Locker[] mediumLocker = new Locker[a];
-//	Locker[] largeLocker = new Locker[a];
-//
-//	for(int i = 0; i < a; i++) {
-//		smallLocker[i] = new Locker();
-//		mediumLocker[i] = new Locker();
-//		largeLocker[i] = new Locker();
-//		
-//	}
-//	
-//	System.out.println(smallLocker[0].getcolor());
-//	System.out.println(mediumLocker[2].getcolor());
-//
-//	
-//	smallLocker[0].setAvailability(0);
-//	
-//	largeLocker[1].setAvailability(0);
-//	System.out.println(smallLocker[0].getAvailability());
-//	System.out.println(smallLocker[1].getAvailability());
-//	System.out.println(smallLocker[2].getAvailability());
-//	
-//	System.out.println(largeLocker[0].getAvailability());
-//	System.out.println(largeLocker[1].getAvailability());
-//	System.out.println(largeLocker[2].getAvailability());
-//	
-//	System.out.println(mediumLocker[0].getAvailability());
-//	System.out.println(mediumLocker[1].getAvailability());
-//	System.out.println(mediumLocker[2].getAvailability());
-//	
-//}
+	int a = 3;
+	
+	locker[] smallLocker = new locker[a];
+	locker[] mediumLocker = new locker[a];
+	locker[] largeLocker = new locker[a];
+
+	for(int i = 0; i < a; i++) {
+		smallLocker[i] = new locker();
+		mediumLocker[i] = new locker();
+		largeLocker[i] = new locker();
+				
+	}
+	
+	System.out.println(smallLocker[0].getColor());
+	System.out.println(mediumLocker[2].getColor());
+	
+	smallLocker[0].setAvailability(true);
+
+	largeLocker[1].setAvailability(true);
+	System.out.println(smallLocker[0].getAvailability());
+	System.out.println(smallLocker[1].getAvailability());
+	System.out.println(smallLocker[2].getAvailability());
+	
+	System.out.println(largeLocker[0].getAvailability());
+	System.out.println(largeLocker[1].getAvailability());
+	System.out.println(largeLocker[2].getAvailability());
+	
+	System.out.println(mediumLocker[0].getAvailability());
+	System.out.println(mediumLocker[1].getAvailability());
+	System.out.println(mediumLocker[2].getAvailability());
+}
 }
 
 //BELOW IS MAIN METHOD TO CREATE INSTANCES OF SMALL,MEDIUM,LARGE LOCKERS BUT I COMMENTED IT OUT BCS IT SHOULD BE IN ANOTHER FILE
