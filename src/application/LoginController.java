@@ -31,18 +31,17 @@ public class LoginController {
 	private Button btnSignIn;
 
 	/***************** Scene Objects & Variables *******************/
-//	Owner Own = new Owner("Omnicron", 8888, "0188888", 8888);
-	Owner Own_ = new Owner("saddam", 1234, "0188888", 8888);
+	Owner Own = new Owner("Omnicron", 8888, "0188888", 8888);
 
 	/***************** Scene Methods *******************/
 	public void signIn(ActionEvent event) throws IOException {
 		System.out.println("Check User");
 //		Initialise User Details
-		int userID = Own_.getId();
-		int userPass = Own_.getPin();
+		int userID = Own.getId();
+		int userPass = Own.getPin();
 		System.out.println("User Data from Login Controller");
-		System.out.println(Own_.getId());
-		System.out.println(Own_.getPin());
+		System.out.println(Own.getId());
+		System.out.println(Own.getPin());
 		String userName = Integer.toString(userID);
 		String userPin = Integer.toString(userPass);
 		/* From Sign In Button */
@@ -55,17 +54,15 @@ public class LoginController {
 			System.out.println(userID);
 			System.out.println(userPass);
 
-			String displayUsername = id.getText();
-
 //			Declare an FXMLLoader with "loader" as name and use it as root component
 			FXMLLoader loader = new FXMLLoader(getClass().getResource("StudentProfile.fxml"));
 			root = loader.load();
 
-//			Create Scene2 Instance Controller to load Scene 2, This allow to access the Methods in Scene 2
+//			Create Student Profile Instance Controller to load Student Profile, This allow to access the Methods in Student Profile
 			StudentProfileController StudentProfileController = loader.getController();
 
-//			Calling "displayName" method from Scene2 to pass the username
-			StudentProfileController.displayName(displayUsername);
+//			Calling "passUserData" method from Student Profile to pass User Details
+			StudentProfileController.passUserData(Own);
 
 //			root = FXMLLoader.load(getClass().getResource("StudentProfile.fxml")); // Not needed
 			stage = (Stage) ((Node) event.getSource()).getScene().getWindow();

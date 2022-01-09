@@ -25,16 +25,10 @@ public class StudentProfileController {
 	private Button btnRent;
 
 	/***************** Scene Objects & Variables *******************/
-	private String id;
 	private static int availsmall = 0;
+	private Owner Own;
 
 	/***************** Scene Methods *******************/
-//	Create a Method to Change the Label Text
-	public void displayName(String username) {
-		id = username;
-		System.out.println("User Data from Student Profile Controller");
-		lblUserId.setText("Welcome " + username + " to Locker Rental System!");
-	}
 
 	public void rent(ActionEvent event) throws IOException {
 		smallLocker[] small = { (new smallLocker(1, 2, true)), (new smallLocker(1, 2, true)),
@@ -48,21 +42,21 @@ public class StudentProfileController {
 
 		// Declare the Owner for the lockers.
 //				Owner Owner = new Owner(2);
-		System.out.println("OwnerID: " + Owner.getId());
+		System.out.println("OwnerID: " + Own.getId());
 
 		// Printout Available Lockers can be rented. // Use This
 		smalllockersAvailable(small);
 
 		// Printout Rented Lockers to Student Profile Screen. // Use This
-		smalllockersRented(small, Owner.getId()); // carSelection(obj, carName, rentHours);
+		smalllockersRented(small, Own.getId()); // carSelection(obj, carName, rentHours);
 
 		mediumlockersAvailable(med);
 
-		mediumlockersRented(med, Owner.getId());
+		mediumlockersRented(med, Own.getId());
 
 		largelockersAvailable(large);
 
-		largelockersRented(large, Owner.getId());
+		largelockersRented(large, Own.getId());
 
 		// Declare an FXMLLoader with "loader" as name and use it as root component
 //		FXMLLoader loader = new FXMLLoader(getClass().getResource("Login.fxml"));
@@ -71,10 +65,13 @@ public class StudentProfileController {
 
 		// Create LockerMenu Instance Controller to load LockerMenu, This allow to
 		// access the Methods in LockerMenu
-		LockerMenuController smallLocMenuController = loader.getController();
+		LockerMenuController LockerMenuControl = loader.getController();
 
 		// Calling "displaysmallAvailability" method from to pass.
-		smallLocMenuController.displaysmallAvailability(availsmall);
+		LockerMenuControl.displaysmallAvailability(availsmall);
+
+//		Calling "passUserData" method from Student Profile to pass User Details
+		LockerMenuControl.passUserData(Own);
 
 //		Declare the Parent, Stages and Scenes
 		stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
@@ -84,7 +81,20 @@ public class StudentProfileController {
 
 	}
 
-	// Check How Many Lockers Available
+	/***** Passing User Data Method ***********/
+	public void passUserData(Owner Own) {
+		this.Own = Own;
+		lblUserId.setText("Welcome " + Own.getName() + " to Locker Rental System!");
+		System.out.println("User Data from Student Profile Controller");
+		System.out.println(Own.getId());
+		System.out.println(Own.getPin());
+	}
+
+	public void displayName(String Username) {
+		lblUserId.setText("Welcome " + Username + " to Locker Rental System!");
+	}
+
+	// ************* Check How Many Lockers Available ************* //
 	public static void smalllockersAvailable(smallLocker[] arr) { // lockers.java dan locker.java
 		int foundSmall = 0;
 		System.out.println("\nAvailable Lockers\n-----------------");
@@ -97,8 +107,7 @@ public class StudentProfileController {
 		System.out.println(foundSmall); // use for lockers to display on "Available" label
 	}
 
-	public static void smalllockersRented(smallLocker[] arr, int id) {
-		int ownerID = Owner.getId();
+	public static void smalllockersRented(smallLocker[] arr, int ownerID) {
 		int foundIDsmall = 0;
 		System.out.println("\nRented Lockers\n-----------------");
 		for (smallLocker x : arr) {
@@ -118,8 +127,7 @@ public class StudentProfileController {
 		System.out.println(foundMedium); // use for lockers to display on "Available" label
 	}
 
-	public static void mediumlockersRented(mediumLocker[] arr, int id) {
-		int ownerID = Owner.getId();
+	public static void mediumlockersRented(mediumLocker[] arr, int ownerID) {
 		int foundIDmedium = 0;
 		System.out.println("\nRented Lockers\n-----------------");
 		for (mediumLocker x : arr) {
@@ -139,8 +147,7 @@ public class StudentProfileController {
 		System.out.println(foundLarge); // use for lockers to display on "Available" label
 	}
 
-	public static void largelockersRented(largeLocker[] arr, int id) {
-		int ownerID = Owner.getId();
+	public static void largelockersRented(largeLocker[] arr, int ownerID) {
 		int foundlargeID = 0;
 		System.out.println("\nRented Lockers\n-----------------");
 		for (largeLocker x : arr) {

@@ -27,6 +27,7 @@ public class CheckoutCartController {
 	private Label totalPrice;
 
 	/***************** Scene Objects & Variables *******************/
+	private Owner Own;
 
 	/***************** Scene Methods *******************/
 	public void checkOut(ActionEvent event) throws IOException {
@@ -39,13 +40,22 @@ public class CheckoutCartController {
 		StudentProfileController StudentProfileController = loader.getController();
 
 //		Calling "displayName" method from Scene2 to pass the username
-		StudentProfileController.displayName("isky");
+		StudentProfileController.displayName(Own.getName());
+		StudentProfileController.passUserData(Own);
 
 //		Declare the Parent, Stages and Scenes
 		stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
 		scene = new Scene(root);
 		stage.setScene(scene);
 		stage.show();
+	}
+
+	/***** Passing User Data Method ***********/
+	public void passUserData(Owner Own) {
+		this.Own = Own;
+		System.out.println("User Data from Locker Menu Controller");
+		System.out.println(Own.getId());
+		System.out.println(Own.getPin());
 	}
 
 	public void displayRent(double totalPayment) {

@@ -1,13 +1,10 @@
 package application;
 
 import java.io.IOException;
-import java.net.URL;
-import java.util.ResourceBundle;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
-import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
@@ -16,7 +13,7 @@ import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
-public class LockerMenuController implements Initializable {
+public class LockerMenuController {
 	/***************** Scene Parent, Stage and Scene *******************/
 	private Stage stage;
 	private Scene scene;
@@ -44,6 +41,7 @@ public class LockerMenuController implements Initializable {
 
 	/***************** Scene Objects & Variables *******************/
 	Double totalPrice = 0.0, totalPayment = 0.0;
+	private Owner Own;
 
 	/***************** Scene Methods smallLockerTotalRent *******************/
 	public void smallLockerTotalRent(ActionEvent event) throws IOException {
@@ -61,6 +59,7 @@ public class LockerMenuController implements Initializable {
 		/*** Passing the data to other Page ****/
 		CheckoutCartController CheckoutCartController = loader.getController();
 		CheckoutCartController.displayRent(totalPayment);
+		CheckoutCartController.passUserData(Own);
 
 //		Declare the Parent, Stages and Scenes
 		stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
@@ -69,6 +68,15 @@ public class LockerMenuController implements Initializable {
 		stage.show();
 	}
 
+	/***** Passing User Data Method ***********/
+	public void passUserData(Owner Own) {
+		this.Own = Own;
+		System.out.println("User Data from Locker Menu Controller");
+		System.out.println(Own.getId());
+		System.out.println(Own.getPin());
+	}
+
+	/***** Check Locker Available to be Rent Method ***********/
 	public void midLockerTotalRent(ActionEvent event) throws IOException {
 		double sizePrice = 40.00;
 		double doorNoPrice = 30.00;
@@ -119,9 +127,4 @@ public class LockerMenuController implements Initializable {
 		availabilitySmall.setText("Locker" + smallLockerAvailable);
 	}
 
-	@Override
-	public void initialize(URL arg0, ResourceBundle arg1) {
-		// TODO Auto-generated method stub
-
-	}
 }
