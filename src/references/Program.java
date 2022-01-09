@@ -14,7 +14,7 @@ public class Program {
 		// lockersAvailable(obj);
 
 		// Printout Rented Lockers to Student Profile Screen. // Use This
-		lockersRented(obj, owner.getId()); // carSelection(obj, carName, rentHours);
+		// lockersRented(obj, owner.getId()); // carSelection(obj, carName, rentHours);
 
 		// Print out all Lockers available (Debug usage)
 		// System.out.println("All car details\n---------------");
@@ -24,6 +24,10 @@ public class Program {
 		//checkOut buttton testing
 //		obj[]
 //		owner owner1 = new owner(111);
+
+		obj[0].display();
+		obj[0].checkOut();
+		obj[0].display();
 
 
 
