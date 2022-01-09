@@ -31,8 +31,8 @@ public class LoginController {
 	private Button btnSignIn;
 
 	/***************** Scene Objects & Variables *******************/
-	Owner Own = new Owner("Omnicron", 8888, "0188888", 8888, 0, 0.0);
-	Owner Own_ = new Owner("saddam", 1234, "0188888", 1234, 0, 0.0);
+	Owner Own = new Owner("Omnicron", 8888, "0188888", 8888);
+	Owner Own_ = new Owner("saddam", 1234, "0188888", 8888);
 
 	/***************** Scene Methods *******************/
 	public void signIn(ActionEvent event) throws IOException {
