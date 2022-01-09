@@ -24,7 +24,6 @@ package application;
 
 class smallLocker extends locker { // implements lockerInterface
 	int id;
-	String color;
 	final int door = 2;
 	double price = 20.00;
 	boolean availability; // this will be replaced by false if it's rented
@@ -34,7 +33,7 @@ class smallLocker extends locker { // implements lockerInterface
 
 	}
 
-	smallLocker(int id, String color, int door, boolean availability) { // , char status
+	smallLocker(int id, int door, boolean availability) { // , char status
 
 	}
 
@@ -53,7 +52,7 @@ class smallLocker extends locker { // implements lockerInterface
 	}
 
 	public String toString() {
-		return "lockerID: " + id + "\nColor: " + color + "\nDoor: " + door + "\nAvailable: " + availability;
+		return "lockerID: " + id + "\nDoor: " + door + "\nAvailable: " + availability;
 	}
 }
 
@@ -70,7 +69,7 @@ class mediumLocker extends locker {
 
 	}
 
-	mediumLocker(int id, String colour, int door, boolean availability, int shelves) {
+	mediumLocker(int id, int door, boolean availability, int shelves) {
 	}
 
 //	Check How Many Small Lockers Available for Rent
@@ -105,7 +104,7 @@ class largeLocker extends locker {
 
 	}
 
-	largeLocker(int id, String colour, int door, boolean availability, int shelves) {
+	largeLocker(int id, int door, boolean availability, int shelves) {
 	}
 
 //	Check How Many Small Lockers Available for Rent
@@ -118,7 +117,7 @@ class largeLocker extends locker {
 			if (x.availability == true)
 				foundLarge++;
 		}
-		System.out.println("Medium Locker Available for rent: " + foundLarge); // use for lockers to display on
+		System.out.println("Large Lockers Available for rent: " + foundLarge); // use for lockers to display on
 																				// "Available" label
 	}
 }

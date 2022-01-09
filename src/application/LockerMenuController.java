@@ -111,4 +111,8 @@ public class LockerMenuController {
 		stage.setScene(scene);
 		stage.show();
 	}
+
+	public void displaysmallAvailability(int smallLockerAvailable) {
+		availabilitySmall.setText("Locker" + smallLockerAvailable);
+	}
 }
