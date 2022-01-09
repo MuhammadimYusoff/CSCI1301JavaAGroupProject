@@ -10,34 +10,39 @@ import javafx.stage.Stage;
 
 public class Main extends Application {
 	private static Stage test;
+
 	@Override
-	public void start(Stage primaryStage) {	
-		
+	public void start(Stage primaryStage) {
+
 		try {
 			test = primaryStage;
 			Parent root = FXMLLoader.load(getClass().getResource("Login.fxml"));
-	        primaryStage.setScene(new Scene(root));
-	        primaryStage.show();
-	        primaryStage.setTitle("StudentProfile Login");
-		} catch(Exception e) {
+			primaryStage.setScene(new Scene(root));
+			primaryStage.show();
+			primaryStage.setTitle("StudentProfile Login");
+		} catch (Exception e) {
 			e.printStackTrace();
 		}
 	}
+
 	public void changeScene(String fxml) throws IOException {
-		Parent pane = FXMLLoader.load(getClass().getResource(fxml)); // the resource will be pass from the class that have the fxml name
+		Parent pane = FXMLLoader.load(getClass().getResource(fxml)); // the resource will be pass from the class that
+																		// have the fxml name
 		test.getScene().setRoot(pane);
 	}
+
 	public static void main(String[] args) {
 //		Initialise User Details
-		Owner Own = new Owner("Omnicron", 8888, "0188888", 8888);
+//		Owner Own = new Owner("Omnicron", 8888, "0188888", 8888);
+		Owner Own_ = new Owner("saddam", 1234, "0188888", 8888);
 //		Vector ownerDetails = new Vector();
 
 //		ownerDetails.addElement(Own);
 //		System.out.println(ownerDetails);
 
 		System.out.println("Get from Main Method");
-		System.out.println(Own.getId());
-		System.out.println(Own.getPin());
+		System.out.println(Own_.getId());
+		System.out.println(Own_.getPin());
 
 //		System.out.println("Vector from Main Method");
 //		System.out.println(ownerDetails.toString());
