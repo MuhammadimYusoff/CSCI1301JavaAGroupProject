@@ -1,82 +1,26 @@
 package application;
 
-import java.io.IOException;
-
-import javafx.event.ActionEvent;
-import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Node;
-import javafx.scene.Scene;
-import javafx.scene.control.Label;
-import javafx.scene.control.TextField;
-import javafx.stage.Stage;
-
-import javafx.scene.Parent;
-
-public class lockers {
-
-	@FXML
-	private TextField smallRentDay;
-	@FXML
-	private TextField midRentDay;
-	@FXML
-	private TextField largeRentDay;
-	@FXML
-	private Label totalPrice;
-
-	public double totalPayment;	
-	@FXML
-	TextField nameTextfield;
-	
-	
-	private Stage stage;
-	private Scene scene;
-	private Parent root;
-	
-	
-	public void smallLockerTotalRent(ActionEvent e) {
-		double sizePrice = 20.00;
-		double doorNoPrice = 20.00;
-		int duration = Integer.parseInt(smallRentDay.getText());
-		double RentTotal = duration + sizePrice + doorNoPrice;
-		totalPayment = RentTotal;
-		totalPrice.setText("Total Rent: " + RentTotal);
-		// idk y its wrong, NW will figure it out
-	}
-
-	public void midLockerTotalRent(ActionEvent e) {
-		double sizePrice = 40.00;
-		double doorNoPrice = 30.00;
-		int duration = Integer.parseInt(midRentDay.getText());
-		double RentTotal = duration + sizePrice + doorNoPrice;
-		totalPayment = RentTotal;
-		totalPrice.setText("Total Rent: " + RentTotal);
-	}
-
-	public void largeLockerTotalRent(ActionEvent e) {
-		double sizePrice = 60.00;
-		double doorNoPrice = 40.00;
-		int duration = Integer.parseInt(largeRentDay.getText());
-		double RentTotal = duration + sizePrice + doorNoPrice;
-		totalPayment = RentTotal;
-		totalPrice.setText("Total Rent: " + RentTotal);
-	}
-	
-	public void pass(ActionEvent event) throws IOException{
-
-		FXMLLoader loder = new FXMLLoader(getClass().getResource("CheckoutCart.fxml"));
-		root = loder.load();
-		
-		CheckoutCartController CheckoutCartController = loder.getController();
-		CheckoutCartController.displayRent(totalPayment);
-		
-		//root = FXMLLoader.load(getClass().getResource("Scene1.fxml"));
-		stage = (Stage)((Node)event.getSource()).getScene().getWindow();
-		scene = new Scene(root);
-		stage.setScene(scene);
-		stage.show();
-	}
-}
+//public class lockers {
+//	@FXML
+//	private Label totalPrice;
+//	@FXML
+//	public double totalPayment;	
+//	@FXML
+//	TextField nameTextfield;
+//	
+//	public void smallLockerTotalRent(ActionEvent e) {
+//		// idk y its wrong, NW will figure it out
+//	}
+//
+//	public void midLockerTotalRent(ActionEvent e) {
+//	}
+//
+//	public void largeLockerTotalRent(ActionEvent e) {
+//	}
+//	
+//	public void pass(ActionEvent event) throws IOException{
+//	}
+//}
 
 class smallLocker extends locker { // implements lockerInterface
 	int id;

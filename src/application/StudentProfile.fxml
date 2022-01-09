@@ -19,7 +19,7 @@
          <font>
             <Font size="16.0" />
          </font></Button>
-      <Label fx:id="lblUserId" layoutX="357.0" layoutY="30.0" text="UserID">
+      <Label fx:id="lblUserId" layoutX="237.0" layoutY="37.0" text="UserID">
          <font>
             <Font size="18.0" />
          </font>

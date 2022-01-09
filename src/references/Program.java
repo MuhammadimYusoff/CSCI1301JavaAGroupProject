@@ -30,6 +30,32 @@ public class Program {
 		
 		largelockersRented(obj2,owner.getId());
 		
+		// lockersRented(obj, owner.getId()); // carSelection(obj, carName, rentHours);
+
+		// Print out all Lockers available (Debug usage)
+		// System.out.println("All car details\n---------------");
+		// for(Car x:obj){
+		// System.out.println(x);
+		// }
+		//checkOut buttton testing
+//		obj[]
+		owner owner2 = new owner(111);
+		owner owner1 = new owner(555);
+
+		System.out.println(owner.getId());;
+
+		obj[0].display();
+		obj[0].checkOut();
+		obj[0].display();
+
+		obj[1].display();
+		obj[1].checkOut();
+		obj[1].display();
+
+
+
+
+
 	}
 
 	// Check How Many Lockers Available
@@ -127,6 +153,13 @@ public class Program {
 	 
 	 
 	 /*
+
+
+}
+
+
+
+/*
  * Change to loop to able have ownerID and locker.id to be compared in one loop
  * if possible.
  */

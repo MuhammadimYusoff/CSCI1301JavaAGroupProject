@@ -1,5 +1,7 @@
 package application;
 
+import java.io.IOException;
+
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -7,25 +9,49 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 
 public class Main extends Application {
+	private static Stage test;
+
 	@Override
 	public void start(Stage primaryStage) {
+
 		try {
+			test = primaryStage;
 			Parent root = FXMLLoader.load(getClass().getResource("Login.fxml"));
-			Scene scene = new Scene(root, 700, 400);
-//			scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
-			primaryStage.setScene(scene);
+			primaryStage.setScene(new Scene(root));
 			primaryStage.show();
+			primaryStage.setTitle("StudentProfile Login");
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
 	}
 
+	public void changeScene(String fxml) throws IOException {
+		Parent pane = FXMLLoader.load(getClass().getResource(fxml)); // the resource will be pass from the class that
+																		// have the fxml name
+		test.getScene().setRoot(pane);
+	}
+
 	public static void main(String[] args) {
+//		Initialise User Details
+//		Owner Own = new Owner("Omnicron", 8888, "0188888", 8888);
+		Owner Own_ = new Owner("saddam", 1234, "0188888", 8888);
+//		Vector ownerDetails = new Vector();
+
+//		ownerDetails.addElement(Own);
+//		System.out.println(ownerDetails);
+
+		System.out.println("Get from Main Method");
+		System.out.println(Own_.getId());
+		System.out.println(Own_.getPin());
+
+//		System.out.println("Vector from Main Method");
+//		System.out.println(ownerDetails.toString());
+//		Launch Application
 		launch(args);
 	}
 }
 
-//////////////////////////////Code Waste ////////////////////////////////////////
+////////////////////////////// Code Waste ////////////////////////////////////////
 /*
  * This Main.java File will be divided into 4 Parts Handling: 1) Sign In 2) User
  * Dashboard 3) Locker Rent UI 4) Checkout UI
