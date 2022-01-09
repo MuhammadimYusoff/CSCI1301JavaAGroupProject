@@ -1,10 +1,13 @@
 package application;
 
 import java.io.IOException;
+import java.net.URL;
+import java.util.ResourceBundle;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
@@ -13,7 +16,7 @@ import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
-public class LockerMenuController {
+public class LockerMenuController implements Initializable {
 	/***************** Scene Parent, Stage and Scene *******************/
 	private Stage stage;
 	private Scene scene;
@@ -55,7 +58,7 @@ public class LockerMenuController {
 //		Declare an FXMLLoader with "loader" as name and use it as root component
 		FXMLLoader loader = new FXMLLoader(getClass().getResource("CheckoutCart.fxml"));
 		root = loader.load();
-		/*** s* Passing the data to other Page ****/
+		/*** Passing the data to other Page ****/
 		CheckoutCartController CheckoutCartController = loader.getController();
 		CheckoutCartController.displayRent(totalPayment);
 
@@ -78,7 +81,7 @@ public class LockerMenuController {
 //		Declare an FXMLLoader with "loader" as name and use it as root component
 		FXMLLoader loader = new FXMLLoader(getClass().getResource("CheckoutCart.fxml"));
 		root = loader.load();
-		/*** s* Passing the data to other Page ****/
+		/**** Passing the data to other Page ****/
 		CheckoutCartController CheckoutCartController = loader.getController();
 		CheckoutCartController.displayRent(totalPayment);
 
@@ -114,5 +117,11 @@ public class LockerMenuController {
 
 	public void displaysmallAvailability(int smallLockerAvailable) {
 		availabilitySmall.setText("Locker" + smallLockerAvailable);
+	}
+
+	@Override
+	public void initialize(URL arg0, ResourceBundle arg1) {
+		// TODO Auto-generated method stub
+
 	}
 }

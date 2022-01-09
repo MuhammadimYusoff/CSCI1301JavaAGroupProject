@@ -11,8 +11,6 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.stage.Stage;
-import references.lockers;
-import references.owner;
 
 public class StudentProfileController {
 	/***************** Scene Parent, Stage and Scene *******************/
@@ -39,47 +37,43 @@ public class StudentProfileController {
 	}
 
 	public void rent(ActionEvent event) throws IOException {
-		smallLocker[] small = { (new smallLocker(1,2,true)), (new smallLocker(1,2,true)),
-				(new smallLocker(1,2,true)) };
-		
-		mediumLocker[] med = { (new mediumLocker(1,2,true,2)), (new mediumLocker(1,2,true,2)),
-				(new mediumLocker(1,2,true,2)) };
+		smallLocker[] small = { (new smallLocker(1, 2, true)), (new smallLocker(1, 2, true)),
+				(new smallLocker(1, 2, true)) };
 
-		largeLocker[] large = { (new largeLocker(1,2,true,4)), (new largeLocker(1,2,true,4)),
-				(new largeLocker(1,2,true,4)) };
-		
+		mediumLocker[] med = { (new mediumLocker(1, 2, true, 2)), (new mediumLocker(1, 2, true, 2)),
+				(new mediumLocker(1, 2, true, 2)) };
+
+		largeLocker[] large = { (new largeLocker(1, 2, true, 4)), (new largeLocker(1, 2, true, 4)),
+				(new largeLocker(1, 2, true, 4)) };
+
 		// Declare the Owner for the lockers.
-				owner Owner = new owner(2);
-				System.out.println("OwnerID: " + Owner.getId());
+//				Owner Owner = new Owner(2);
+		System.out.println("OwnerID: " + Owner.getId());
 
-				// Printout Available Lockers can be rented. // Use This
-				smalllockersAvailable(small);
+		// Printout Available Lockers can be rented. // Use This
+		smalllockersAvailable(small);
 
-				// Printout Rented Lockers to Student Profile Screen. // Use This
-				smalllockersRented(small, owner.getId()); // carSelection(obj, carName, rentHours);
-				
-				mediumlockersAvailable(med);
-				
-				mediumlockersRented(med,owner.getId());
-				
-				largelockersAvailable(large);
-				
-				largelockersRented(large,owner.getId());
-				
-				
+		// Printout Rented Lockers to Student Profile Screen. // Use This
+		smalllockersRented(small, Owner.getId()); // carSelection(obj, carName, rentHours);
 
-				
+		mediumlockersAvailable(med);
 
-		//		Declare an FXMLLoader with "loader" as name and use it as root component
+		mediumlockersRented(med, Owner.getId());
+
+		largelockersAvailable(large);
+
+		largelockersRented(large, Owner.getId());
+
+		// Declare an FXMLLoader with "loader" as name and use it as root component
 //		FXMLLoader loader = new FXMLLoader(getClass().getResource("Login.fxml"));
 		FXMLLoader loader = new FXMLLoader(getClass().getResource("LockerMenu.fxml"));
 		root = loader.load();
-		
-		//Create LockerMenu Instance Controller to load LockerMenu, This allow to access the Methods in LockerMenu 
+
+		// Create LockerMenu Instance Controller to load LockerMenu, This allow to
+		// access the Methods in LockerMenu
 		LockerMenuController smallLocMenuController = loader.getController();
 
-		
-		//Calling "displaysmallAvailability" method from  to pass.
+		// Calling "displaysmallAvailability" method from to pass.
 		smallLocMenuController.displaysmallAvailability(availsmall);
 
 //		Declare the Parent, Stages and Scenes
@@ -87,9 +81,9 @@ public class StudentProfileController {
 		scene = new Scene(root);
 		stage.setScene(scene);
 		stage.show();
-		
+
 	}
-	
+
 	// Check How Many Lockers Available
 	public static void smalllockersAvailable(smallLocker[] arr) { // lockers.java dan locker.java
 		int foundSmall = 0;
@@ -97,13 +91,14 @@ public class StudentProfileController {
 		for (smallLocker x : arr) {
 			if (x.availability)
 				foundSmall++;
-		} 			availsmall=foundSmall;
+		}
+		availsmall = foundSmall;
 
 		System.out.println(foundSmall); // use for lockers to display on "Available" label
 	}
-	
+
 	public static void smalllockersRented(smallLocker[] arr, int id) {
-		int ownerID = owner.getId();
+		int ownerID = Owner.getId();
 		int foundIDsmall = 0;
 		System.out.println("\nRented Lockers\n-----------------");
 		for (smallLocker x : arr) {
@@ -112,9 +107,9 @@ public class StudentProfileController {
 		}
 		System.out.println("Rented Small Locker: " + foundIDsmall); // use for lockers to display on "Available" label
 	}
-	
+
 	public static void mediumlockersAvailable(mediumLocker[] arr) { // lockers.java dan locker.java
-		int foundMedium= 0;
+		int foundMedium = 0;
 		System.out.println("\nAvailable Lockers\n-----------------");
 		for (mediumLocker x : arr) {
 			if (x.availability)
@@ -124,7 +119,7 @@ public class StudentProfileController {
 	}
 
 	public static void mediumlockersRented(mediumLocker[] arr, int id) {
-		int ownerID = owner.getId();
+		int ownerID = Owner.getId();
 		int foundIDmedium = 0;
 		System.out.println("\nRented Lockers\n-----------------");
 		for (mediumLocker x : arr) {
@@ -133,9 +128,9 @@ public class StudentProfileController {
 		}
 		System.out.println("Rented medium Locker: " + foundIDmedium); // use for lockers to display on "Available" label
 	}
-	
+
 	public static void largelockersAvailable(largeLocker[] arr) { // lockers.java dan locker.java
-		int foundLarge= 0;
+		int foundLarge = 0;
 		System.out.println("\nAvailable Lockers\n-----------------");
 		for (largeLocker x : arr) {
 			if (x.availability)
@@ -145,7 +140,7 @@ public class StudentProfileController {
 	}
 
 	public static void largelockersRented(largeLocker[] arr, int id) {
-		int ownerID = owner.getId();
+		int ownerID = Owner.getId();
 		int foundlargeID = 0;
 		System.out.println("\nRented Lockers\n-----------------");
 		for (largeLocker x : arr) {
@@ -153,8 +148,7 @@ public class StudentProfileController {
 				foundlargeID++;
 		}
 		System.out.println("Rented large Locker: " + foundlargeID); // use for lockers to display on "Available" label
-	
-		
+
 	}
 
 }

@@ -1,7 +1,5 @@
 package application;
 
-import references.owner;
-
 public class locker {
 	private int id = 0; // locker id will be replaced with owner id if they rent it
 	private String color; // = "Red";
@@ -53,7 +51,7 @@ public class locker {
 	}
 
 	public static void lockerRented(locker[] arr, int id) {
-		int ownerID = owner.getId(); // get userID to compare.
+		int ownerID = Owner.getId(); // get userID to compare.
 		int found = 0;
 		System.out.println("\nRented Lockers\n-----------------");
 		for (locker x : arr) {
@@ -64,43 +62,41 @@ public class locker {
 		}
 		System.out.println("Rented Locker: " + found); // use for lockers to display on "Available" label
 	}
-	
-	
-
-public static void main(String[] args) {
-//	// TODO Auto-generated method stub
-	int a = 3;
-	
-	locker[] smallLocker = new locker[a];
-	locker[] mediumLocker = new locker[a];
-	locker[] largeLocker = new locker[a];
-
-	for(int i = 0; i < a; i++) {
-		smallLocker[i] = new locker();
-		mediumLocker[i] = new locker();
-		largeLocker[i] = new locker();
-				
-	}
-	
-	System.out.println(smallLocker[0].getColor());
-	System.out.println(mediumLocker[2].getColor());
-	
-	smallLocker[0].setAvailability(true);
-
-	largeLocker[1].setAvailability(true);
-	System.out.println(smallLocker[0].getAvailability());
-	System.out.println(smallLocker[1].getAvailability());
-	System.out.println(smallLocker[2].getAvailability());
-	
-	System.out.println(largeLocker[0].getAvailability());
-	System.out.println(largeLocker[1].getAvailability());
-	System.out.println(largeLocker[2].getAvailability());
-	
-	System.out.println(mediumLocker[0].getAvailability());
-	System.out.println(mediumLocker[1].getAvailability());
-	System.out.println(mediumLocker[2].getAvailability());
 }
-}
+
+//	public static void main(String[] args) {
+//		int a = 3;
+//
+//		locker[] smallLocker = new locker[a];
+//		locker[] mediumLocker = new locker[a];
+//		locker[] largeLocker = new locker[a];
+//
+//		for (int i = 0; i < a; i++) {
+//			smallLocker[i] = new locker();
+//			mediumLocker[i] = new locker();
+//			largeLocker[i] = new locker();
+//
+//		}
+//
+//		System.out.println(smallLocker[0].getColor());
+//		System.out.println(mediumLocker[2].getColor());
+//
+//		smallLocker[0].setAvailability(true);
+//
+//		largeLocker[1].setAvailability(true);
+//		System.out.println(smallLocker[0].getAvailability());
+//		System.out.println(smallLocker[1].getAvailability());
+//		System.out.println(smallLocker[2].getAvailability());
+//
+//		System.out.println(largeLocker[0].getAvailability());
+//		System.out.println(largeLocker[1].getAvailability());
+//		System.out.println(largeLocker[2].getAvailability());
+//
+//		System.out.println(mediumLocker[0].getAvailability());
+//		System.out.println(mediumLocker[1].getAvailability());
+//		System.out.println(mediumLocker[2].getAvailability());
+//	}
+//}
 
 //BELOW IS MAIN METHOD TO CREATE INSTANCES OF SMALL,MEDIUM,LARGE LOCKERS BUT I COMMENTED IT OUT BCS IT SHOULD BE IN ANOTHER FILE
 /*

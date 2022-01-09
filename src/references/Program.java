@@ -5,7 +5,7 @@ public class Program {
 		// Declare the Lockers to be use
 		lockers[] obj = { (new lockers("smallLocker 1", false, 20, 1)), (new lockers("smallLocker 2", false, 20, 2)),
 				(new lockers("smallLocker 3", true, 20, 3)) };
-		
+
 		lockers[] obj1 = { (new lockers("mediumLocker 1", true, 20, 1)), (new lockers("mediumLocker 2", false, 20, 2)),
 				(new lockers("mediumLocker 3", true, 20, 3)) };
 
@@ -21,15 +21,15 @@ public class Program {
 
 		// Printout Rented Lockers to Student Profile Screen. // Use This
 		smalllockersRented(obj, owner.getId()); // carSelection(obj, carName, rentHours);
-		
+
 		mediumlockersAvailable(obj1);
-		
-		mediumlockersRented(obj1,owner.getId());
-		
+
+		mediumlockersRented(obj1, owner.getId());
+
 		largelockersAvailable(obj2);
-		
-		largelockersRented(obj2,owner.getId());
-		
+
+		largelockersRented(obj2, owner.getId());
+
 		// lockersRented(obj, owner.getId()); // carSelection(obj, carName, rentHours);
 
 		// Print out all Lockers available (Debug usage)
@@ -39,10 +39,11 @@ public class Program {
 		// }
 		// checkOut buttton testing
 //		obj[]
-		owner owner2 = new owner(111);
 		owner owner1 = new owner(555);
+		owner owner2 = new owner(111);
 
-		System.out.println(owner.getId());;
+		System.out.println(owner.getId());
+		;
 
 		obj[0].display();
 		obj[0].checkOut();
@@ -51,10 +52,6 @@ public class Program {
 		obj[1].display();
 		obj[1].checkOut();
 		obj[1].display();
-
-
-
-
 
 	}
 
@@ -82,7 +79,7 @@ public class Program {
 		}
 		System.out.println("Rented Small Locker: " + found); // use for lockers to display on "Available" label
 	}
-	
+
 	public static void mediumlockersAvailable(lockers[] arr) { // lockers.java dan locker.java
 		int found = 0;
 		// int foundSmall = 0;
@@ -106,7 +103,7 @@ public class Program {
 		}
 		System.out.println("Rented medium Locker: " + found); // use for lockers to display on "Available" label
 	}
-	
+
 	public static void largelockersAvailable(lockers[] arr) { // lockers.java dan locker.java
 		int found = 0;
 		// int foundSmall = 0;
@@ -129,8 +126,7 @@ public class Program {
 				found++;
 		}
 		System.out.println("Rented large Locker: " + found); // use for lockers to display on "Available" label
-	
-		
+
 	}
 }
 //	public static void lockersSelection(lockers[] arr, int id) {
@@ -147,18 +143,12 @@ public class Program {
 //	// System.out.println("\nThe l you selected is: " + x.name);
 //	 }		
 
-
-	 
-
-	 
-	 
-	 /*
-
-}
-
 /*
- * Change to loop to able have ownerID and locker.id to be compared in one loop
- * if possible.
+ * 
+ * }
+ * 
+ * /* Change to loop to able have ownerID and locker.id to be compared in one
+ * loop if possible.
  */
 // Check How Many Lockers Rented by a user to be display on Student Profile.
 
