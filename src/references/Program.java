@@ -23,11 +23,20 @@ public class Program {
 		// }
 		//checkOut buttton testing
 //		obj[]
-//		owner owner1 = new owner(111);
+		owner owner2 = new owner(111);
+		owner owner1 = new owner(555);
+
+		System.out.println(owner.getId());;
 
 		obj[0].display();
 		obj[0].checkOut();
 		obj[0].display();
+
+		obj[1].display();
+		obj[1].checkOut();
+		obj[1].display();
+
+
 
 
 
