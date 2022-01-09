@@ -5,6 +5,8 @@ public class Owner {
 	private int id; // Owner ID, this will be use to check for rented locker
 	private String phoneNo; // Owner phone number
 	private int pin; // Owner password
+//	Day
+//	totalRent
 
 	public Owner() {
 	}

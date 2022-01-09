@@ -1,18 +1,18 @@
 package references;
 
 public class owner {
-	private static int id;
+	private int id;
 
 	public owner(int id) {
-		this.setId(id);
+		this.id = id;
 	}
 
-	public static int getId() {
+	public int getId() {
 		return id;
 	}
 
-	public static void setId(int id) {
-		owner.id = id;
+	public void setId(int id) {
+		this.id = id;
 	}
 
 //	public static void main(String[] args){

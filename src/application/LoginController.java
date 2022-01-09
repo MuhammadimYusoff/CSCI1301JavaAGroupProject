@@ -31,7 +31,7 @@ public class LoginController {
 	private Button btnSignIn;
 
 	/***************** Scene Objects & Variables *******************/
-	Owner Own = new Owner("Omnicron", 8888, "0188888", 8888);
+//	Owner Own = new Owner("Omnicron", 8888, "0188888", 8888);
 	Owner Own_ = new Owner("saddam", 1234, "0188888", 8888);
 
 	/***************** Scene Methods *******************/
@@ -40,11 +40,14 @@ public class LoginController {
 //		Initialise User Details
 		int userID = Own_.getId();
 		int userPass = Own_.getPin();
+		System.out.println("User Data from Login Controller");
+		System.out.println(Own_.getId());
+		System.out.println(Own_.getPin());
 		String userName = Integer.toString(userID);
 		String userPin = Integer.toString(userPass);
 		/* From Sign In Button */
-		System.out.println(userID);
-		System.out.println(userPass);
+//		System.out.println(userID);
+//		System.out.println(userPass);
 
 		/* Check User Credentials */
 		System.out.println("Check Login");

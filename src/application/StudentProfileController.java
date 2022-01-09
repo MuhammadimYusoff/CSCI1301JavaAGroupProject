@@ -31,6 +31,7 @@ public class StudentProfileController {
 //	Create a Method to Change the Label Text
 	public void displayName(String username) {
 		id = username;
+		System.out.println("User Data from Student Profile Controller");
 		lblUserId.setText("Welcome " + username + " to Locker Rental System!");
 	}
 

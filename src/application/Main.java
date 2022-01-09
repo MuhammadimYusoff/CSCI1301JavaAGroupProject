@@ -34,15 +34,15 @@ public class Main extends Application {
 	public static void main(String[] args) {
 //		Initialise User Details
 //		Owner Own = new Owner("Omnicron", 8888, "0188888", 8888);
-		Owner Own_ = new Owner("saddam", 1234, "0188888", 8888);
+//		Owner Own_ = new Owner("saddam", 1234, "0188888", 8888);
 //		Vector ownerDetails = new Vector();
 
 //		ownerDetails.addElement(Own);
 //		System.out.println(ownerDetails);
 
 		System.out.println("Get from Main Method");
-		System.out.println(Own_.getId());
-		System.out.println(Own_.getPin());
+//		System.out.println(Own_.getId());
+//		System.out.println(Own_.getPin());
 
 //		System.out.println("Vector from Main Method");
 //		System.out.println(ownerDetails.toString());

@@ -2,10 +2,9 @@ package references;
 
 public class Program {
 	public static void main(String[] args) {
-		// Declare the Lockers to be use
+		owner Owner = new owner(123);
 		lockers[] obj = { (new lockers("smallLocker 1", true, 20, 1)), (new lockers("smallLocker 2", false, 20, 2)),
 				(new lockers("smallLocker 3", true, 20, 3)) };
-
 		// Declare the Owner for the lockers.
 //		owner Owner = new owner(2);
 		// System.out.println("OwnerID: " + Owner.getId());
@@ -14,22 +13,20 @@ public class Program {
 		// lockersAvailable(obj);
 
 		// Printout Rented Lockers to Student Profile Screen. // Use This
-		// lockersRented(obj, owner.getId()); // carSelection(obj, carName, rentHours);
+		lockersRented(obj, Owner.getId()); // carSelection(obj, carName, rentHours);
 
 		// Print out all Lockers available (Debug usage)
 		// System.out.println("All car details\n---------------");
 		// for(Car x:obj){
 		// System.out.println(x);
 		// }
-		//checkOut buttton testing
+		// checkOut buttton testing
 //		obj[]
 //		owner owner1 = new owner(111);
 
-		obj[0].display();
-		obj[0].checkOut();
-		obj[0].display();
-
-
+//		obj[0].display();
+//		obj[0].checkOut();
+//		obj[0].display();
 
 	}
 
@@ -48,7 +45,7 @@ public class Program {
 	}
 
 	public static void lockersRented(lockers[] arr, int id) {
-		int ownerID = owner.getId();
+		int ownerID = id;
 		int found = 0;
 		System.out.println("\nRented Lockers\n-----------------");
 		for (lockers x : arr) {
@@ -58,10 +55,7 @@ public class Program {
 		System.out.println("Rented Small Locker: " + found); // use for lockers to display on "Available" label
 	}
 
-
 }
-
-
 
 /*
  * Change to loop to able have ownerID and locker.id to be compared in one loop
