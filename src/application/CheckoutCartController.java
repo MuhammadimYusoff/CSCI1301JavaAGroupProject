@@ -60,6 +60,6 @@ public class CheckoutCartController {
 	}
 
 	public void displayRent(double totalPayment) {
-		totalPrice.setText("total Payment is: " + totalPayment);
+		totalPrice.setText("Total Payment is: \n" + totalPayment);
 	}
 }

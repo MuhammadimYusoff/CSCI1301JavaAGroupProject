@@ -125,7 +125,15 @@ public class LockerMenuController {
 	}
 
 	public void displaysmallAvailability(int smallLockerAvailable) {
-		availabilitySmall.setText("Locker" + smallLockerAvailable);
+		availabilitySmall.setText("Locker " + smallLockerAvailable);
+	}
+
+	public void displaymidAvailability(int midLockerAvailable) {
+		availabilityMid.setText("Locker " + midLockerAvailable);
+	}
+
+	public void displaylargeAvailability(int largeLockerAvailable) {
+		availabilityLarge.setText("Locker " + largeLockerAvailable);
 	}
 
 }

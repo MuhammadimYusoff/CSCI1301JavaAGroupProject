@@ -10,19 +10,19 @@
 <AnchorPane prefHeight="385.0" prefWidth="573.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.CheckoutCartController">
    <children>
       <Accordion />
-      <AnchorPane prefHeight="385.0" prefWidth="269.0" style="-fx-background-color: #30D5C8;">
+      <AnchorPane prefHeight="385.0" prefWidth="280.0" style="-fx-background-color: #30D5C8;">
          <children>
-            <Text layoutX="56.0" layoutY="107.0" strokeType="OUTSIDE" strokeWidth="0.0" text="TOTAL PRICE:">
+            <Text layoutX="59.0" layoutY="106.0" strokeType="OUTSIDE" strokeWidth="0.0" text="TOTAL PRICE:">
                <font>
                   <Font size="25.0" />
                </font>
             </Text>
-            <Text layoutX="2.0" layoutY="250.0" strokeType="OUTSIDE" strokeWidth="0.0" text="PROCED TO COUNTER FOR PAYMENT">
+            <Text layoutX="1.0" layoutY="289.0" strokeType="OUTSIDE" strokeWidth="0.0" text="PROCEED TO COUNTER FOR PAYMENT" textAlignment="CENTER" wrappingWidth="269.0">
                <font>
                   <Font size="16.0" />
                </font>
             </Text>
-            <Label fx:id="totalPrice" layoutX="51.0" layoutY="144.0" text="TotalPrice">
+            <Label fx:id="totalPrice" layoutX="-1.0" layoutY="146.0" prefWidth="280.0" text="Ask Management" textAlignment="CENTER">
                <font>
                   <Font size="38.0" />
                </font>
@@ -38,6 +38,6 @@
          <font>
             <Font size="14.0" />
          </font></Button>
-      <Label fx:id="lblLockerRentDetails" layoutX="287.0" layoutY="162.0" text="Lockers Rent Details" />
+      <Label fx:id="lblLockerRentDetails" layoutX="301.0" layoutY="160.0" text="Lockers Rent Details" />
    </children>
 </AnchorPane>

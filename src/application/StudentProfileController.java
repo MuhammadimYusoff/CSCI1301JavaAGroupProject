@@ -26,6 +26,8 @@ public class StudentProfileController {
 
 	/***************** Scene Objects & Variables *******************/
 	private static int availsmall = 0;
+	private static int availmid = 0;
+	private static int availlarge = 0;
 	private Owner Own;
 
 	/***************** Scene Methods *******************/
@@ -48,7 +50,7 @@ public class StudentProfileController {
 		smalllockersAvailable(small);
 
 		// Printout Rented Lockers to Student Profile Screen. // Use This
-		smalllockersRented(small, Own.getId()); // carSelection(obj, carName, rentHours);
+		smalllockersRented(small, Own.getId());
 
 		mediumlockersAvailable(med);
 
@@ -67,8 +69,10 @@ public class StudentProfileController {
 		// access the Methods in LockerMenu
 		LockerMenuController LockerMenuControl = loader.getController();
 
-		// Calling "displaysmallAvailability" method from to pass.
+		// Calling all display available lockers method from to pass.
 		LockerMenuControl.displaysmallAvailability(availsmall);
+		LockerMenuControl.displaymidAvailability(availmid);
+		LockerMenuControl.displaylargeAvailability(availlarge);
 
 //		Calling "passUserData" method from Student Profile to pass User Details
 		LockerMenuControl.passUserData(Own);
@@ -124,6 +128,7 @@ public class StudentProfileController {
 			if (x.availability)
 				foundMedium++;
 		}
+		availmid = foundMedium;
 		System.out.println(foundMedium); // use for lockers to display on "Available" label
 	}
 
@@ -144,6 +149,7 @@ public class StudentProfileController {
 			if (x.availability)
 				foundLarge++;
 		}
+		availlarge = foundLarge;
 		System.out.println(foundLarge); // use for lockers to display on "Available" label
 	}
 
