@@ -78,7 +78,7 @@ public class StudentProfileController {
 		scene = new Scene(root);
 		stage.setScene(scene);
 		stage.show();
-
+		stage.setTitle("Locker Menu Screen");
 	}
 
 	/***** Passing User Data Method ***********/

@@ -69,6 +69,7 @@ public class LoginController {
 			scene = new Scene(root);
 			stage.setScene(scene);
 			stage.show();
+			stage.setTitle("User Profile");
 		}
 
 		else if (id.getText().isEmpty() && password.getText().isEmpty()) {

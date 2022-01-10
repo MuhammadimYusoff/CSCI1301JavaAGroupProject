@@ -48,6 +48,7 @@ public class CheckoutCartController {
 		scene = new Scene(root);
 		stage.setScene(scene);
 		stage.show();
+		stage.setTitle("User Profile");
 	}
 
 	/***** Passing User Data Method ***********/

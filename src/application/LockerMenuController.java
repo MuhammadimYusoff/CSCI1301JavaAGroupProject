@@ -66,6 +66,7 @@ public class LockerMenuController {
 		scene = new Scene(root);
 		stage.setScene(scene);
 		stage.show();
+		stage.setTitle("Checkout Cart");
 	}
 
 	/***** Passing User Data Method ***********/
