@@ -46,7 +46,7 @@
                   <Font size="16.0" />
                </font>
             </Label>
-            <Text layoutX="171.0" layoutY="126.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Availablity:">
+            <Text layoutX="171.0" layoutY="126.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Availability:">
                <font>
                   <Font size="16.0" />
                </font></Text>
@@ -62,6 +62,7 @@
             </Text>
             <TextField fx:id="smallRentDay" layoutX="494.0" layoutY="123.0" prefHeight="25.0" prefWidth="123.0" promptText="Rent Days" />
             <Button fx:id="btnChooseSmall" accessibleText="Choose Small Locker to Rent" layoutX="626.0" layoutY="122.0" mnemonicParsing="false" onAction="#smallLockerTotalRent" prefHeight="25.0" prefWidth="86.0" style="-fx-background-color: #ffffff;" text="CHOOSE" textAlignment="CENTER" />
+            <Label fx:id="smallDurationError" layoutX="626.0" layoutY="101.0" textFill="RED" />
          </children>
          <opaqueInsets>
             <Insets />
@@ -104,7 +105,7 @@
                   <Font size="16.0" />
                </font>
             </Label>
-            <Text layoutX="171.0" layoutY="126.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Availablity:">
+            <Text layoutX="171.0" layoutY="126.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Availability:">
                <font>
                   <Font size="16.0" />
                </font>
@@ -121,6 +122,7 @@
             </Text>
             <TextField fx:id="midRentDay" layoutX="494.0" layoutY="123.0" prefHeight="25.0" prefWidth="123.0" promptText="Rent Days" />
             <Button fx:id="btnChooseMid" accessibleText="Choose Small Locker to Rent" layoutX="626.0" layoutY="122.0" mnemonicParsing="false" onAction="#midLockerTotalRent" prefHeight="25.0" prefWidth="86.0" style="-fx-background-color: #ffffff;" text="CHOOSE" textAlignment="CENTER" />
+            <Label fx:id="midDurationError" layoutX="626.0" layoutY="100.0" textFill="RED" />
          </children>
          <opaqueInsets>
             <Insets />
@@ -163,7 +165,7 @@
                   <Font size="16.0" />
                </font>
             </Label>
-            <Text layoutX="171.0" layoutY="126.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Availablity:">
+            <Text layoutX="171.0" layoutY="126.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Availability:">
                <font>
                   <Font size="16.0" />
                </font>
@@ -180,6 +182,7 @@
             </Text>
             <TextField fx:id="largeRentDay" layoutX="494.0" layoutY="123.0" prefHeight="25.0" prefWidth="123.0" promptText="Rent Days" />
             <Button fx:id="btnChooseLarge" accessibleText="Choose Small Locker to Rent" layoutX="626.0" layoutY="122.0" mnemonicParsing="false" onAction="#largeLockerTotalRent" prefHeight="25.0" prefWidth="86.0" style="-fx-background-color: #ffffff;" text="CHOOSE" textAlignment="CENTER" />
+            <Label fx:id="largeDurationError" layoutX="626.0" layoutY="100.0" textFill="RED" />
          </children>
          <opaqueInsets>
             <Insets />

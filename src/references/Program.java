@@ -3,7 +3,7 @@ package references;
 public class Program {
 	public static void main(String[] args) {
 		// Declare the Lockers to be use
-		lockers[] obj = { (new lockers("smallLocker 1", false, 20, 1)), (new lockers("smallLocker 2", false, 20, 2)),
+		lockers[] obj = { (new lockers("smallLocker 1", true, 20, 1)), (new lockers("smallLocker 2", false, 20, 2)),
 				(new lockers("smallLocker 3", true, 20, 3)) };
 
 		lockers[] obj1 = { (new lockers("mediumLocker 1", true, 20, 1)), (new lockers("mediumLocker 2", false, 20, 2)),
@@ -20,15 +20,15 @@ public class Program {
 		smalllockersAvailable(obj);
 
 		// Printout Rented Lockers to Student Profile Screen. // Use This
-		smalllockersRented(obj, owner.getId()); // carSelection(obj, carName, rentHours);
+//		smalllockersRented(obj, owner.getId()); // carSelection(obj, carName, rentHours);
 
-		mediumlockersAvailable(obj1);
+//		mediumlockersAvailable(obj1);
+//
+//		mediumlockersRented(obj1, owner.getId());
+//
+//		largelockersAvailable(obj2);
 
-		mediumlockersRented(obj1, owner.getId());
-
-		largelockersAvailable(obj2);
-
-		largelockersRented(obj2, owner.getId());
+//		largelockersRented(obj2, owner.getId());
 
 		// lockersRented(obj, owner.getId()); // carSelection(obj, carName, rentHours);
 
@@ -39,19 +39,19 @@ public class Program {
 		// }
 		// checkOut buttton testing
 //		obj[]
-		owner owner1 = new owner(555);
-		owner owner2 = new owner(111);
+//		owner owner1 = new owner(555);
+//		owner owner2 = new owner(111);
+//
+//		System.out.println(owner.getId());
+//
 
-		System.out.println(owner.getId());
-		;
-
-		obj[0].display();
-		obj[0].checkOut();
-		obj[0].display();
-
-		obj[1].display();
-		obj[1].checkOut();
-		obj[1].display();
+//		obj[0].display();
+//		obj[0].checkOut();
+//		obj[0].display();
+//
+//		obj[1].display();
+//		obj[1].checkOut();
+//		obj[1].display();
 
 	}
 
@@ -63,10 +63,10 @@ public class Program {
 		// int foundLarge = 0;
 		System.out.println("\nAvailable Lockers\n-----------------");
 		for (lockers x : arr) {
-			if (x.isAvailable)
+			if (x.isAvailable == true)
 				found++;
 		}
-		System.out.println(found); // use for lockers to display on "Available" label
+		System.out.println("haha" + found); // use for lockers to display on "Available" label
 	}
 
 	public static void smalllockersRented(lockers[] arr, int id) {

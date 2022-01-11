@@ -25,9 +25,9 @@ public class StudentProfileController {
 	private Button btnRent;
 
 	/***************** Scene Objects & Variables *******************/
-	private static int availsmall = 0;
-	private static int availmid = 0;
-	private static int availlarge = 0;
+	private int availsmall;
+	private int availmid;
+	private int availlarge;
 	private Owner Own;
 
 	/***************** Scene Methods *******************/
@@ -76,6 +76,7 @@ public class StudentProfileController {
 
 //		Calling "passUserData" method from Student Profile to pass User Details
 		LockerMenuControl.passUserData(Own);
+		
 
 //		Declare the Parent, Stages and Scenes
 		stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
@@ -99,20 +100,20 @@ public class StudentProfileController {
 	}
 
 	// ************* Check How Many Lockers Available ************* //
-	public static void smalllockersAvailable(smallLocker[] arr) { // lockers.java dan locker.java
+	public void smalllockersAvailable(smallLocker[] arr) { // lockers.java dan locker.java
 		int foundSmall = 0;
-		System.out.println("\nAvailable Lockers\n-----------------");
+		System.out.println("\nAvailable small Lockers\n-----------------");
 		for (smallLocker x : arr) {
-			if (x.availability)
+			if (x.availability == true)
 				foundSmall++;
 		}
 		availsmall = foundSmall;
-		System.out.println(foundSmall); // use for lockers to display on "Available" label
+		System.out.println("haha sus" + foundSmall); // use for lockers to display on "Available" label
 	}
 
-	public static void smalllockersRented(smallLocker[] arr, int ownerID) {
+	public void smalllockersRented(smallLocker[] arr, int ownerID) {
 		int foundIDsmall = 0;
-		System.out.println("\nRented Lockers\n-----------------");
+		System.out.println("\nRented small Lockers\n-----------------");
 		for (smallLocker x : arr) {
 			if (x.id == ownerID)
 				foundIDsmall++;
@@ -120,20 +121,20 @@ public class StudentProfileController {
 		System.out.println("Rented Small Locker: " + foundIDsmall); // use for lockers to display on "Available" label
 	}
 
-	public static void mediumlockersAvailable(mediumLocker[] arr) { // lockers.java dan locker.java
+	public void mediumlockersAvailable(mediumLocker[] arr) { // lockers.java dan locker.java
 		int foundMedium = 0;
-		System.out.println("\nAvailable Lockers\n-----------------");
+		System.out.println("\nAvailable medium Lockers\n-----------------");
 		for (mediumLocker x : arr) {
-			if (x.availability)
+			if (x.availability == true)
 				foundMedium++;
 		}
 		availmid = foundMedium;
 		System.out.println(foundMedium); // use for lockers to display on "Available" label
 	}
 
-	public static void mediumlockersRented(mediumLocker[] arr, int ownerID) {
+	public void mediumlockersRented(mediumLocker[] arr, int ownerID) {
 		int foundIDmedium = 0;
-		System.out.println("\nRented Lockers\n-----------------");
+		System.out.println("\nRented medium Lockers\n-----------------");
 		for (mediumLocker x : arr) {
 			if (x.id == ownerID)
 				foundIDmedium++;
@@ -141,20 +142,20 @@ public class StudentProfileController {
 		System.out.println("Rented medium Locker: " + foundIDmedium); // use for lockers to display on "Available" label
 	}
 
-	public static void largelockersAvailable(largeLocker[] arr) { // lockers.java dan locker.java
+	public void largelockersAvailable(largeLocker[] arr) { // lockers.java dan locker.java
 		int foundLarge = 0;
-		System.out.println("\nAvailable Lockers\n-----------------");
+		System.out.println("\nAvailable large Lockers\n-----------------");
 		for (largeLocker x : arr) {
-			if (x.availability)
+			if (x.availability == true)
 				foundLarge++;
 		}
 		availlarge = foundLarge;
 		System.out.println(foundLarge); // use for lockers to display on "Available" label
 	}
 
-	public static void largelockersRented(largeLocker[] arr, int ownerID) {
+	public void largelockersRented(largeLocker[] arr, int ownerID) {
 		int foundlargeID = 0;
-		System.out.println("\nRented Lockers\n-----------------");
+		System.out.println("\nRented large Lockers\n-----------------");
 		for (largeLocker x : arr) {
 			if (x.id == ownerID)
 				foundlargeID++;

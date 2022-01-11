@@ -28,6 +28,9 @@ public class CheckoutCartController {
 
 	/***************** Scene Objects & Variables *******************/
 	private Owner Own;
+	private smallLocker[] small;
+	private mediumLocker[] med;
+	private largeLocker[] large;
 
 	/***************** Scene Methods *******************/
 	public void checkOut(ActionEvent event) throws IOException {
@@ -69,6 +72,7 @@ public class CheckoutCartController {
 			if (x.availability) {
 				x.id = OwnerID;
 				x.availability = false;
+				System.out.println("Small" + x.getAvailability());
 				break;
 			}
 		}
@@ -90,6 +94,14 @@ public class CheckoutCartController {
 				break;
 			}
 		}
+	}
+
+	public void passLockerData(smallLocker[] small, mediumLocker[] med, largeLocker[] large) {
+		// TODO Auto-generated method stub
+		this.small = small;
+		this.med = med;
+		this.large = large;
+		
 	}
 
 }

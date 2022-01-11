@@ -27,6 +27,12 @@ public class LockerMenuController {
 	@FXML
 	private TextField largeRentDay;
 	@FXML
+	private Label smallDurationError;
+	@FXML
+	private Label mediumDurationError;
+	@FXML
+	private Label largeDurationError;
+	@FXML
 	private Label availabilitySmall;
 	@FXML
 	private Label availabilityMid;
@@ -42,38 +48,55 @@ public class LockerMenuController {
 	/***************** Scene Objects & Variables *******************/
 	Double totalPrice = 0.0, totalPayment = 0.0;
 	private Owner Own;
+	private smallLocker[] small;
+	private mediumLocker[] med;
+	private largeLocker[] large;
+	
 
 	/***************** Scene Methods smallLockerTotalRent *******************/
 	public void smallLockerTotalRent(ActionEvent event) throws IOException {
 		double sizePrice = 20.00;
 		double doorNoPrice = 20.00;
 		int duration = Integer.parseInt(smallRentDay.getText());
-		double RentTotal = duration + sizePrice + doorNoPrice;
-		totalPayment = RentTotal;
+		if (Integer.parseInt(smallRentDay.getText()) > 0) {
+    		double RentTotal = duration + sizePrice + doorNoPrice;
+    		totalPayment = RentTotal;
+				
+				System.out.println("lol");
+				/***************** Scene Change *******************/
+//				Declare an FXMLLoader with "loader" as name and use it as root component
+				FXMLLoader loader = new FXMLLoader(getClass().getResource("CheckoutCart.fxml"));
+				root = loader.load();
+				/*** Passing the data to other Page ****/
+				CheckoutCartController CheckoutCartController = loader.getController();
+				CheckoutCartController.displayRent(totalPayment);
+				CheckoutCartController.passUserData(Own);
 
-		/***************** Scene Change *******************/
-//		Declare an FXMLLoader with "loader" as name and use it as root component
-		FXMLLoader loader = new FXMLLoader(getClass().getResource("CheckoutCart.fxml"));
-		root = loader.load();
-		/*** Passing the data to other Page ****/
-		CheckoutCartController CheckoutCartController = loader.getController();
-		CheckoutCartController.displayRent(totalPayment);
-		CheckoutCartController.passUserData(Own);
 
+				/*** Instantiate small locker ****/
+				smallLocker[] small = { (new smallLocker(1, 2, false)), (new smallLocker(1, 2, true)),
+						(new smallLocker(1, 2, true)) };
 
-		/*** Instantiate small locker ****/
-		smallLocker[] small = { (new smallLocker(1, 2, true)), (new smallLocker(1, 2, true)),
-				(new smallLocker(1, 2, true)) };
+				/*** Let owner take 1 small locker ****/
+				CheckoutCartController.takeSmallLocker(small, Own.getId() );
 
-		/*** Let owner take 1 small locker ****/
-		CheckoutCartController.takeSmallLocker(small, Own.getId() );
+//				Declare the Parent, Stages and Scenes
+				stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+				stage.setTitle("Checkout Cart");
+				scene = new Scene(root);
+				stage.setScene(scene);
+				stage.show();
+			}
+			else if (smallRentDay.getText().isEmpty()) {
+			            smallDurationError.setText("Enter you Day");
+			        } 
+			        else {
+			        	smallDurationError.setText("Invalid number of days");
+			        }
+	
+		
 
-//		Declare the Parent, Stages and Scenes
-		stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-		stage.setTitle("Checkout Cart");
-		scene = new Scene(root);
-		stage.setScene(scene);
-		stage.show();
+		
 	}
 
 	/***** Passing User Data Method ***********/
@@ -89,8 +112,12 @@ public class LockerMenuController {
 		double sizePrice = 40.00;
 		double doorNoPrice = 30.00;
 		int duration = Integer.parseInt(midRentDay.getText());
-		double RentTotal = duration + sizePrice + doorNoPrice;
-		totalPayment = RentTotal;
+		if (duration < 0) {
+			mediumDurationError.setText("Invalid no of days.");
+		}else {
+			double RentTotal = duration + sizePrice + doorNoPrice;
+			totalPayment = RentTotal;
+		}
 
 		/***************** Scene Change midLockerTotalRent *******************/
 //		Declare an FXMLLoader with "loader" as name and use it as root component
@@ -99,6 +126,8 @@ public class LockerMenuController {
 		/**** Passing the data to other Page ****/
 		CheckoutCartController CheckoutCartController = loader.getController();
 		CheckoutCartController.displayRent(totalPayment);
+		CheckoutCartController.passUserData(Own);
+		CheckoutCartController.passLockerData(small,med,large);
 
 		/*** Instantiate medium locker ****/
 		mediumLocker[] med = { (new mediumLocker(1, 2, true, 2)), (new mediumLocker(1, 2, true, 2)),
@@ -118,8 +147,12 @@ public class LockerMenuController {
 		double sizePrice = 60.00;
 		double doorNoPrice = 40.00;
 		int duration = Integer.parseInt(largeRentDay.getText());
-		double RentTotal = duration + sizePrice + doorNoPrice;
-		totalPayment = RentTotal;
+		if (duration < 0) {
+			largeDurationError.setText("Invalid no of days.");
+		}else {
+			double RentTotal = duration + sizePrice + doorNoPrice;
+			totalPayment = RentTotal;
+		}
 
 		/***************** Scene Change largeLockerTotalRent *******************/
 //		Declare an FXMLLoader with "loader" as name and use it as root component
@@ -128,6 +161,7 @@ public class LockerMenuController {
 		/*** Passing the data to other Page ****/
 		CheckoutCartController CheckoutCartController = loader.getController();
 		CheckoutCartController.displayRent(totalPayment);
+		CheckoutCartController.passUserData(Own);
 
 		/*** Instantiate large locker ****/
 		largeLocker[] large = { (new largeLocker(1, 2, true, 4)), (new largeLocker(1, 2, true, 4)),
@@ -144,15 +178,17 @@ public class LockerMenuController {
 	}
 
 	public void displaysmallAvailability(int smallLockerAvailable) {
-		availabilitySmall.setText("Locker " + smallLockerAvailable);
+		availabilitySmall.setText("LOCKERS " + smallLockerAvailable);
 	}
 
 	public void displaymidAvailability(int midLockerAvailable) {
-		availabilityMid.setText("Locker " + midLockerAvailable);
+		availabilityMid.setText("LOCKERS " + midLockerAvailable);
 	}
 
 	public void displaylargeAvailability(int largeLockerAvailable) {
-		availabilityLarge.setText("Locker " + largeLockerAvailable);
+		availabilityLarge.setText("LOCKERS " + largeLockerAvailable);
 	}
+
+
 
 }
