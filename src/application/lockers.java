@@ -20,7 +20,6 @@ class smallLocker extends locker { // implements lockerInterface
 
 class mediumLocker extends locker {
 	int id;
-	final String color = "Brown";
 	final int door = 3;
 	double price = 40.00;
 	boolean availability;
@@ -39,7 +38,6 @@ class mediumLocker extends locker {
 
 class largeLocker extends locker {
 	int id;
-	final String color = "Gold";
 	final int door = 4;
 	double price = 60.00;
 	boolean availability;

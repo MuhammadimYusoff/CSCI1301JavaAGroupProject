@@ -107,7 +107,6 @@ public class StudentProfileController {
 				foundSmall++;
 		}
 		availsmall = foundSmall;
-
 		System.out.println(foundSmall); // use for lockers to display on "Available" label
 	}
 

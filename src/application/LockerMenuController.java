@@ -50,7 +50,6 @@ public class LockerMenuController {
 		int duration = Integer.parseInt(smallRentDay.getText());
 		double RentTotal = duration + sizePrice + doorNoPrice;
 		totalPayment = RentTotal;
-//		totalPrice.setText("Total Rent: " + RentTotal);
 
 		/***************** Scene Change *******************/
 //		Declare an FXMLLoader with "loader" as name and use it as root component
@@ -63,10 +62,10 @@ public class LockerMenuController {
 
 //		Declare the Parent, Stages and Scenes
 		stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+		stage.setTitle("Checkout Cart");
 		scene = new Scene(root);
 		stage.setScene(scene);
 		stage.show();
-		stage.setTitle("Checkout Cart");
 	}
 
 	/***** Passing User Data Method ***********/
@@ -84,7 +83,6 @@ public class LockerMenuController {
 		int duration = Integer.parseInt(midRentDay.getText());
 		double RentTotal = duration + sizePrice + doorNoPrice;
 		totalPayment = RentTotal;
-//		totalPrice.setText("Total Rent: " + RentTotal);
 
 		/***************** Scene Change midLockerTotalRent *******************/
 //		Declare an FXMLLoader with "loader" as name and use it as root component
@@ -107,13 +105,12 @@ public class LockerMenuController {
 		int duration = Integer.parseInt(largeRentDay.getText());
 		double RentTotal = duration + sizePrice + doorNoPrice;
 		totalPayment = RentTotal;
-//		totalPrice.setText("Total Rent: " + RentTotal);
 
 		/***************** Scene Change largeLockerTotalRent *******************/
 //		Declare an FXMLLoader with "loader" as name and use it as root component
 		FXMLLoader loader = new FXMLLoader(getClass().getResource("CheckoutCart.fxml"));
 		root = loader.load();
-		/*** s* Passing the data to other Page ****/
+		/*** Passing the data to other Page ****/
 		CheckoutCartController CheckoutCartController = loader.getController();
 		CheckoutCartController.displayRent(totalPayment);
 
