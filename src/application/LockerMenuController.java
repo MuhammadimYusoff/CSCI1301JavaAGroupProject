@@ -60,6 +60,14 @@ public class LockerMenuController {
 		CheckoutCartController.displayRent(totalPayment);
 		CheckoutCartController.passUserData(Own);
 
+
+		/*** Instantiate small locker ****/
+		smallLocker[] small = { (new smallLocker(1, 2, true)), (new smallLocker(1, 2, true)),
+				(new smallLocker(1, 2, true)) };
+
+		/*** Let owner take 1 small locker ****/
+		CheckoutCartController.takeSmallLocker(small, Own.getId() );
+
 //		Declare the Parent, Stages and Scenes
 		stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
 		stage.setTitle("Checkout Cart");
@@ -92,6 +100,13 @@ public class LockerMenuController {
 		CheckoutCartController CheckoutCartController = loader.getController();
 		CheckoutCartController.displayRent(totalPayment);
 
+		/*** Instantiate medium locker ****/
+		mediumLocker[] med = { (new mediumLocker(1, 2, true, 2)), (new mediumLocker(1, 2, true, 2)),
+				(new mediumLocker(1, 2, true, 2)) };
+
+		/*** Let owner take 1 medium locker ****/
+		CheckoutCartController.takeMediumLocker(med, Own.getId() );
+
 //		Declare the Parent, Stages and Scenes
 		stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
 		scene = new Scene(root);
@@ -113,6 +128,13 @@ public class LockerMenuController {
 		/*** Passing the data to other Page ****/
 		CheckoutCartController CheckoutCartController = loader.getController();
 		CheckoutCartController.displayRent(totalPayment);
+
+		/*** Instantiate large locker ****/
+		largeLocker[] large = { (new largeLocker(1, 2, true, 4)), (new largeLocker(1, 2, true, 4)),
+				(new largeLocker(1, 2, true, 4)) };
+
+		/*** Let owner take 1 large locker ****/
+		CheckoutCartController.takeLargeLocker(large, Own.getId() );
 
 //		Declare the Parent, Stages and Scenes
 		stage = (Stage) ((Node) event.getSource()).getScene().getWindow();

@@ -62,4 +62,34 @@ public class CheckoutCartController {
 	public void displayRent(double totalPayment) {
 		totalPrice.setText("Total Payment is: \n" + totalPayment);
 	}
+
+	/***** Methods to insert ownerID to lockerID and change its availability ***********/
+	public void takeSmallLocker(smallLocker[] arr, int OwnerID){
+		for (smallLocker x : arr) {
+			if (x.availability) {
+				x.id = OwnerID;
+				x.availability = false;
+				break;
+			}
+		}
+	}
+	public void takeMediumLocker(mediumLocker[] arr, int OwnerID){
+		for (mediumLocker x : arr) {
+			if (x.availability) {
+				x.id = OwnerID;
+				x.availability = false;
+				break;
+			}
+		}
+	}
+	public void takeLargeLocker(largeLocker[] arr, int OwnerID){
+		for (largeLocker x : arr) {
+			if (x.availability) {
+				x.id = OwnerID;
+				x.availability = false;
+				break;
+			}
+		}
+	}
+
 }
