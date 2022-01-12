@@ -1,6 +1,5 @@
 package application;
 
-
 class smallLocker extends locker { // implements lockerInterface
 	int id;
 	int door = 2;
@@ -17,7 +16,7 @@ class smallLocker extends locker { // implements lockerInterface
 	}
 
 	public String toString() {
-		return "lockerID: " + id + "\nDoor: " + door + "\nAvailable: " + availability;
+		return "\nDoor: " + door + "\nBase Price: " + price;
 	}
 }
 
@@ -39,7 +38,7 @@ class mediumLocker extends locker {
 	}
 
 	public String toString() {
-		return "lockerID: " + id + "\nDoor: " + door + "\nAvailable: " + availability;
+		return "\nDoor: " + door + "\nBase Price: " + price + "\nShelves: " + shelves;
 	}
 }
 
@@ -61,6 +60,6 @@ class largeLocker extends locker {
 	}
 
 	public String toString() {
-		return "lockerID: " + id + "\nDoor: " + door + "\nAvailable: " + availability;
+		return "\nDoor: " + door + "\nBase Price: " + price + "\nShelves: " + shelves;
 	}
 }

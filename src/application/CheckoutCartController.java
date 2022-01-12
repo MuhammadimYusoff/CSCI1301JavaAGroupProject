@@ -25,6 +25,8 @@ public class CheckoutCartController {
 	private Button btnCheckout;
 	@FXML
 	private Label totalPrice;
+	@FXML
+	private Label displayDetails;
 
 	/***************** Scene Objects & Variables *******************/
 	private Owner Own;
@@ -42,9 +44,9 @@ public class CheckoutCartController {
 //		Create Scene2 Instance Controller to load Scene 2, This allow to access the Methods in Scene 2
 		StudentProfileController StudentProfileController = loader.getController();
 
-//		Calling "displayName" method from Scene2 to pass the username
-		StudentProfileController.displayName(Own.getName());
-		StudentProfileController.passUserData(Own);
+//		Pass User Details and display their name
+		StudentProfileController.displayName(Own);
+//		StudentProfileController.LockerRented(small, med, large, Own);
 
 //		Declare the Parent, Stages and Scenes
 		stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
@@ -54,54 +56,68 @@ public class CheckoutCartController {
 		stage.setTitle("User Profile");
 	}
 
-	/***** Passing User Data Method ***********/
-	public void passUserData(Owner Own) {
-		this.Own = Own;
-		System.out.println("User Data from Locker Menu Controller");
-		System.out.println(Own.getId());
-		System.out.println(Own.getPin());
-	}
-
 	public void displayRent(double totalPayment) {
-		totalPrice.setText("Total Payment is: \n" + totalPayment);
+		totalPrice.setText("Total Payment is: \nRM" + totalPayment);
 	}
 
-	/***** Methods to insert ownerID to lockerID and change its availability ***********/
-	public void takeSmallLocker(smallLocker[] arr, int OwnerID){
-		for (smallLocker x : arr) {
+	/******
+	 * Methods to insert ownerID to lockerID and change its availability
+	 ***********/
+	public void takeSmallLocker(smallLocker[] small, mediumLocker[] med, largeLocker[] large, Owner Own) {
+		this.Own = Own;
+		int OwnerID = Own.getId();
+		for (smallLocker x : small) {
 			if (x.availability) {
 				x.id = OwnerID;
 				x.availability = false;
-				System.out.println("Small" + x.getAvailability());
-				break;
-			}
-		}
-	}
-	public void takeMediumLocker(mediumLocker[] arr, int OwnerID){
-		for (mediumLocker x : arr) {
-			if (x.availability) {
-				x.id = OwnerID;
-				x.availability = false;
-				break;
-			}
-		}
-	}
-	public void takeLargeLocker(largeLocker[] arr, int OwnerID){
-		for (largeLocker x : arr) {
-			if (x.availability) {
-				x.id = OwnerID;
-				x.availability = false;
+				System.out.println("Small: " + x.getAvailability());
+				displayDetails.setText("Rent Details:\n" + "\nSize: Small" + x.toString());
+//				Assign Locker to Array to pass to Student Profile
+				this.small = small;
+				this.med = med;
+				this.large = large;
+				System.out.println("From takeSmallLockerMethod");
 				break;
 			}
 		}
 	}
 
-	public void passLockerData(smallLocker[] small, mediumLocker[] med, largeLocker[] large) {
-		// TODO Auto-generated method stub
-		this.small = small;
-		this.med = med;
-		this.large = large;
-		
+	public void takeMediumLocker(smallLocker[] small, mediumLocker[] med, largeLocker[] large, Owner Own) {
+		this.Own = Own;
+		int OwnerID = Own.getId();
+		for (mediumLocker x : med) {
+			if (x.availability) {
+				x.id = OwnerID;
+				x.availability = false;
+				System.out.println("Medium: " + x.getAvailability());
+				displayDetails.setText("Rent Details:\n" + "\nSize: Medium" + x.toString());
+//				Assign Locker to Array to pass to Student Profile
+				this.small = small;
+				this.med = med;
+				this.large = large;
+				System.out.println("From takeMediumLockerMethod");
+				System.out.println(small.toString());
+				System.out.println(large.toString());
+				break;
+			}
+		}
 	}
 
+	public void takeLargeLocker(smallLocker[] small, mediumLocker[] med, largeLocker[] large, Owner Own) {
+		this.Own = Own;
+		int OwnerID = Own.getId();
+		for (largeLocker x : large) {
+			if (x.availability) {
+				x.id = OwnerID;
+				x.availability = false;
+				System.out.println("Large: " + x.getAvailability());
+				displayDetails.setText("Rent Details:\n" + "\nSize: Large" + x.toString());
+//				Assign Locker to Array to pass to Student Profile
+				this.small = small;
+				this.med = med;
+				this.large = large;
+				break;
+			}
+		}
+	}
 }

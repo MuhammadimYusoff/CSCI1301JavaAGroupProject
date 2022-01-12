@@ -20,7 +20,7 @@ public class StudentProfileController {
 
 	/***************** Scene Components *******************/
 	@FXML
-	private Label lblUserId;
+	private Label lblUserId, rentedLockerList;
 	@FXML
 	private Button btnRent;
 
@@ -42,8 +42,7 @@ public class StudentProfileController {
 		largeLocker[] large = { (new largeLocker(1, 2, true, 4)), (new largeLocker(1, 2, true, 4)),
 				(new largeLocker(1, 2, true, 4)) };
 
-		// Declare the Owner for the lockers.
-//				Owner Owner = new Owner(2);
+		// Check Owner ID for their lockers.
 		System.out.println("OwnerID: " + Own.getId());
 
 		// Printout Available Lockers can be rented. // Use This
@@ -76,7 +75,6 @@ public class StudentProfileController {
 
 //		Calling "passUserData" method from Student Profile to pass User Details
 		LockerMenuControl.passUserData(Own);
-		
 
 //		Declare the Parent, Stages and Scenes
 		stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
@@ -95,8 +93,8 @@ public class StudentProfileController {
 		System.out.println(Own.getPin());
 	}
 
-	public void displayName(String Username) {
-		lblUserId.setText("Welcome " + Username + " to Locker Rental System!");
+	public void displayName(Owner Own) {
+		lblUserId.setText("Welcome " + Own.getName() + " to Locker Rental System!");
 	}
 
 	// ************* Check How Many Lockers Available ************* //
@@ -163,5 +161,48 @@ public class StudentProfileController {
 		System.out.println("Rented large Locker: " + foundlargeID); // use for lockers to display on "Available" label
 
 	}
+
+//	public void LockerRented(smallLocker[] small, mediumLocker[] med, largeLocker[] large, Owner Own) {
+//		this.Own = Own;
+//		int OwnerID = Own.getId();
+//		int RentedSmall = 0, RentedMedium = 0, RentedLarge = 0;
+//		for (smallLocker x : small) {
+//			System.out.println("Masuk Small");
+//			if (x.availability) {
+//				x.id = OwnerID;
+//				x.availability = false;
+//				System.out.println("Small: " + x.getAvailability());
+//				RentedSmall++;
+//			}
+//		}
+//		for (mediumLocker y : med) {
+//			if (y.availability) {
+//				System.out.println("Masuk Medium");
+//				y.id = OwnerID;
+//				y.availability = false;
+//				System.out.println("Medium: " + y.getAvailability());
+//				RentedMedium++;
+//			}
+//		}
+//		for (largeLocker z : large) {
+//			System.out.println("Masuk Large");
+//			if (z.availability) {
+//				z.id = OwnerID;
+//				z.availability = false;
+//				System.out.println("Large: " + z.getAvailability());
+//				RentedLarge++;
+//			}
+//		}
+//
+//		if (RentedSmall > 0) {
+//			rentedLockerList.setText("Rent Details:\n" + "\nSize: Small" + small[0].toString());
+//		} else if (RentedMedium > 0) {
+//			rentedLockerList.setText("Rent Details:\n" + "\nSize: Medium" + med[0].toString());
+//		} else if (RentedLarge > 0) {
+//			rentedLockerList.setText("Rent Details:\n" + "\nSize: Large" + large[0].toString());
+//		} else {
+//			rentedLockerList.setText("");
+//		}
+//	}
 
 }

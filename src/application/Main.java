@@ -10,8 +10,6 @@ public class Main extends Application {
 
 	@Override
 	public void start(Stage primaryStage) {
-//		Initialise User Details
-		Owner Own = new Owner("Omnicron", 8888, "0188888", 8888);
 		try {
 			Parent root = FXMLLoader.load(getClass().getResource("Login.fxml"));
 			primaryStage.setScene(new Scene(root));
